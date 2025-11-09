@@ -614,7 +614,7 @@ trainerdata 19, "Mickey"
 trainerdata 20, "Falkner"
     trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_LEADER_FALKNER
-    nummons 2
+    nummons 4
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -623,31 +623,49 @@ trainerdata 20, "Falkner"
     battletype SINGLE_BATTLE
     endentry
 
-
-
-
-
     party 20
         // mon 0
         ivs 50
         abilityslot 0
-        level 9
+        level 13
         pokemon SPECIES_WATTREL
         move MOVE_THUNDER_SHOCK
         move MOVE_QUICK_ATTACK
         move MOVE_ROOST
-        move MOVE_PLUCK
+        move MOVE_AERIAL_ACE
         ballseal 0
 
         // mon 1
         ivs 50
         abilityslot 0
         level 13
-        pokemon SPECIES_PIDGEOTTO
-        move MOVE_TACKLE
+        pokemon SPECIES_PIPLUP
+        move MOVE_BUBBLE
         move MOVE_ROOST
-        move MOVE_GUST
-        move MOVE_NONE
+        move MOVE_AERIAL_ACE
+        move MOVE_WORK_UP
+        ballseal 0
+
+        // mon 2
+        ivs 50
+        abilityslot 0
+        level 14
+        pokemon SPECIES_GLIGAR
+        move MOVE_SAND_TOMB
+        move MOVE_ROOST
+        move MOVE_POISON_TAIL
+        move MOVE_SPIKES
+        ballseal 0
+
+        // mon 2
+        ivs 255
+        abilityslot 1
+        level 15
+        pokemon SPECIES_TRUMBEAK
+        move MOVE_FURY_ATTACK
+        move MOVE_ROOST
+        move MOVE_AERIAL_ACE
+        move MOVE_ROCK_SMASH
         ballseal 0
     endparty
 
