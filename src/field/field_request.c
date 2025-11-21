@@ -44,7 +44,7 @@ void ClearOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req)
 
 void SetOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, u16 trg)
 {
-    if ((trg & PAD_BUTTON_R) || (trg & PAD_BUTTON_L)) {
+    if (trg & PAD_BUTTON_L) {
         req->OpenPCCheck = TRUE;
     }
 }

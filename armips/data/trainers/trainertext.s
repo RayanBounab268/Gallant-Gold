@@ -3094,6 +3094,12 @@ _1ACC: // Trainer 629
 _1AD0: // Trainer 630
     trainertextentry 630, TEXT_DEFEATED_IN_BATTLE, "Whoa, you’re kickin’!\n"
 
+_1AD4: // Trainer 738
+    trainertextentry 738, TEXT_DEFEATED_IN_BATTLE, "Wow, you sure are tough!\n"
+
+_1AD8: // Trainer 739
+    trainertextentry 739, TEXT_DEFEATED_IN_BATTLE, "Wow, you sure are tough!\n"
+
 .close
 
 
@@ -3835,5 +3841,7 @@ _1AD0: // Trainer 630
 /* Trainer 732 */ .halfword _184C
 /* Trainer 733 */ .halfword _1858
 /* Trainer 734 */ .halfword _185C
+/* Trainer 738 */ .halfword _1AD4
+/* Trainer 739 */ .halfword _1AD8
 
 .close

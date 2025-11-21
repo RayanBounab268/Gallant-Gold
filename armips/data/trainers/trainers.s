@@ -123,29 +123,29 @@ trainerdata 4, "Wade"
         // mon 0
         ivs 0
         abilityslot 0
-        level 2
-        pokemon SPECIES_CATERPIE
+        level 4
+        pokemon SPECIES_DEWPIDER
         ballseal 0
 
         // mon 1
         ivs 0
         abilityslot 0
-        level 2
-        pokemon SPECIES_CATERPIE
+        level 5
+        pokemon SPECIES_WURMPLE
         ballseal 0
 
         // mon 2
         ivs 0
         abilityslot 0
-        level 3
-        pokemon SPECIES_WEEDLE
+        level 5
+        pokemon SPECIES_NINCADA
         ballseal 0
 
         // mon 3
         ivs 0
         abilityslot 0
-        level 2
-        pokemon SPECIES_CATERPIE
+        level 5
+        pokemon SPECIES_SIZZLIPEDE
         ballseal 0
     endparty
 
@@ -250,7 +250,7 @@ trainerdata 7, "Irwin"
 trainerdata 8, "Joey"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass TRAINERCLASS_YOUNGSTER
-    nummons 1
+    nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -264,6 +264,13 @@ trainerdata 8, "Joey"
         ivs 0
         abilityslot 0
         level 4
+        pokemon SPECIES_WOOLOO
+        ballseal 0
+
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 5
         pokemon SPECIES_RATTATA
         ballseal 0
     endparty
@@ -1557,15 +1564,15 @@ trainerdata 47, "Mikey"
         // mon 0
         ivs 0
         abilityslot 0
-        level 2
-        pokemon SPECIES_PIDGEY
+        level 4
+        pokemon SPECIES_STARLY
         ballseal 0
 
         // mon 1
         ivs 0
         abilityslot 32
-        level 4
-        pokemon SPECIES_RATTATA
+        level 5
+        pokemon SPECIES_SKIDDO
         ballseal 0
     endparty
 
@@ -7864,7 +7871,7 @@ trainerdata 248, "Ed"
 trainerdata 249, "Don"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass TRAINERCLASS_BUG_CATCHER
-    nummons 2
+    nummons 3
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -7877,15 +7884,22 @@ trainerdata 249, "Don"
         // mon 0
         ivs 0
         abilityslot 0
-        level 3
-        pokemon SPECIES_CATERPIE
+        level 5
+        pokemon SPECIES_VENIPEDE
         ballseal 0
 
         // mon 1
         ivs 0
         abilityslot 0
-        level 3
-        pokemon SPECIES_CATERPIE
+        level 5
+        pokemon SPECIES_SIZZLIPEDE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 6
+        pokemon SPECIES_SCATTERBUG
         ballseal 0
     endparty
 
@@ -16724,7 +16738,7 @@ trainerdata 495, "Boy"
         // mon 0
         ivs 0
         abilityslot 0
-        level 5
+        level 4
         pokemon SPECIES_ROGGENROLA
         ballseal 0
         // mon 1
@@ -16736,7 +16750,7 @@ trainerdata 495, "Boy"
     endparty
 
 trainerdata 496, "Boy"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_PASSERBY
     nummons 2
     item ITEM_NONE
@@ -16751,16 +16765,22 @@ trainerdata 496, "Boy"
         // mon 0
         ivs 0
         abilityslot 0
-        level 5
+        level 4
         pokemon SPECIES_TYNAMO
         move MOVE_TACKLE
         move MOVE_SPARK
+        move MOVE_NONE
+        move MOVE_NONE
         ballseal 0
         // mon 1
         ivs 0
         abilityslot 0
         level 7
         pokemon SPECIES_CYNDAQUIL
+        move MOVE_TACKLE
+        move MOVE_LEER
+        move MOVE_NONE
+        move MOVE_NONE
         ballseal 0
     endparty
 
@@ -16780,8 +16800,8 @@ trainerdata 497, "Boy"
         // mon 0
         ivs 0
         abilityslot 0
-        level 5
-        pokemon SPECIES_SNEASEL
+        level 4
+        pokemon SPECIES_VENIPEDE
         ballseal 0
         // mon 1
         ivs 0
@@ -25905,5 +25925,76 @@ trainerdata 737, "Silver"
         move MOVE_SLUDGE_BOMB
         move MOVE_SHADOW_BALL
         move MOVE_CONFUSE_RAY
+        ballseal 0
+    endparty
+
+
+trainerdata 738, "Ethan"
+    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainerclass TRAINERCLASS_NPC_TRAINER_ETHAN
+    nummons 3
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 738
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 7
+        pokemon SPECIES_ESPURR
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 8
+        pokemon SPECIES_MARILL
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 7
+        pokemon SPECIES_GROWLITHE
+        ballseal 0
+    endparty
+
+trainerdata 739, "Lyra"
+    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainerclass TRAINERCLASS_NPC_TRAINER_LYRA
+    nummons 3
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 739
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 7
+        pokemon SPECIES_ESPURR
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 8
+        pokemon SPECIES_MARILL
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 7
+        pokemon SPECIES_VULPIX
         ballseal 0
     endparty
