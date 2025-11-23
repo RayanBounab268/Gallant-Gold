@@ -53,8 +53,8 @@ u16 MainMusicComboTable[][2] =
     [ANIM_MUSIC_COMBO_KIMONO_GIRL] = {0x2D, SEQ_GS_VS_TRAINER},
     [ANIM_MUSIC_COMBO_RED] = {0x2E, SEQ_GS_VS_CHAMP},
     // (***END OF VANILLA ENTRIES***)
-    [ANIM_MUSIC_COMBO_ETHAN] = {0x2F, SEQ_GS_VS_TRAINER},
-    [ANIM_MUSIC_COMBO_LYRA] = {0x30, SEQ_GS_VS_TRAINER},
+    [ANIM_MUSIC_COMBO_ETHAN] = {0xFFFF, SEQ_GS_VS_TRAINER},
+    [ANIM_MUSIC_COMBO_LYRA] = {0xFFFF, SEQ_GS_VS_TRAINER},
 };
 
 // format is one byte for trainer class, then one byte for combo (combo increments by 4 because each combo is four bytes long)
