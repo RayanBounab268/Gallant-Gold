@@ -76,7 +76,7 @@ a {COLOR 255}Yellow Shard{COLOR 0}
 a {COLOR 255}Green Shard{COLOR 0}
 a {COLOR 255}Super Repel{COLOR 0}
 a {COLOR 255}Max Repel{COLOR 0}
-an {COLOR 255}Escape Rope{COLOR 0}
+{COLOR 255}Escape Rope{COLOR 0}
 a {COLOR 255}Repel{COLOR 0}
 a {COLOR 255}Sun Stone{COLOR 0}
 a {COLOR 255}Moon Stone{COLOR 0}

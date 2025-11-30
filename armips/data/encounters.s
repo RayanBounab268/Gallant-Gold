@@ -643,46 +643,46 @@ superrodrate 0
 walklevels 3, 4, 3, 4, 5, 5, 3, 3, 6, 5, 6, 5
 
 // morning encounter slots
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_NATU        // 20
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_CHINGLING   // 10
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_MEDITITE    // 4
+pokemon SPECIES_MEDITITE    // 4
+pokemon SPECIES_MEDITITE    // 1
+pokemon SPECIES_MEDITITE    // 1
 
 // day encounter slots
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_MEDITITE    // 20
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_CHINGLING   // 10
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_NATU        // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_MEDITITE    // 1
+pokemon SPECIES_MEDITITE    // 1
 
 // night encounter slots
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
+pokemon SPECIES_DUSKULL     // 20
+pokemon SPECIES_RATTATA     // 20
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_ESPURR      // 10
+pokemon SPECIES_ESPURR      // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_RATTATA     // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_DUSKULL     // 4
+pokemon SPECIES_BELLSPROUT  // 4
+pokemon SPECIES_SPINARAK    // 1
+pokemon SPECIES_RATTATA     // 1
 
 // hoenn encounter slots
 pokemon SPECIES_ZIGZAGOON
@@ -747,46 +747,46 @@ superrodrate 0
 walklevels 3, 4, 3, 4, 5, 5, 3, 3, 6, 5, 6, 5
 
 // morning encounter slots
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_NATU        // 20
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_CHINGLING   // 10
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_MEDITITE    // 4
+pokemon SPECIES_MEDITITE    // 4
+pokemon SPECIES_MEDITITE    // 1
+pokemon SPECIES_MEDITITE    // 1
 
 // day encounter slots
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_MEDITITE    // 20
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_CHINGLING   // 10
+pokemon SPECIES_MINCCINO    // 10
+pokemon SPECIES_NATU        // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_MEDITITE    // 1
+pokemon SPECIES_MEDITITE    // 1
 
 // night encounter slots
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
-pokemon SPECIES_GASTLY
-pokemon SPECIES_RATTATA
+pokemon SPECIES_DUSKULL     // 20
+pokemon SPECIES_RATTATA     // 20
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_ESPURR      // 10
+pokemon SPECIES_ESPURR      // 10
+pokemon SPECIES_SPINARAK    // 10
+pokemon SPECIES_RATTATA     // 5
+pokemon SPECIES_BELLSPROUT  // 5
+pokemon SPECIES_DUSKULL     // 4
+pokemon SPECIES_BELLSPROUT  // 4
+pokemon SPECIES_SPINARAK    // 1
+pokemon SPECIES_RATTATA     // 1
 
 // hoenn encounter slots
 pokemon SPECIES_ZIGZAGOON
@@ -851,46 +851,46 @@ superrodrate 75
 walklevels 6, 4, 6, 4, 6, 6, 6, 6, 6, 4, 6, 4
 
 // morning encounter slots
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_RATTATA
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_RATTATA
-pokemon SPECIES_MAREEP
-pokemon SPECIES_MAREEP
-pokemon SPECIES_HOPPIP
-pokemon SPECIES_HOPPIP
-pokemon SPECIES_RATTATA
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_RATTATA
-pokemon SPECIES_ZUBAT
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_WOOPER      // 20  
+pokemon SPECIES_BELLSPROUT  // 10
+pokemon SPECIES_CHEWTLE     // 10
+pokemon SPECIES_MAREEP      // 10
+pokemon SPECIES_MAREEP      // 10
+pokemon SPECIES_EKANS       // 5
+pokemon SPECIES_NATU        // 5
+pokemon SPECIES_NINCADA     // 4
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_NINCADA     // 1
+pokemon SPECIES_MAREEP      // 1
 
 // day encounter slots
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_RATTATA
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_RATTATA
-pokemon SPECIES_MAREEP
-pokemon SPECIES_MAREEP
-pokemon SPECIES_HOPPIP
-pokemon SPECIES_HOPPIP
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
-pokemon SPECIES_RATTATA
+pokemon SPECIES_BELLSPROUT  // 20
+pokemon SPECIES_WOOPER      // 20  
+pokemon SPECIES_BELLSPROUT  // 10
+pokemon SPECIES_CHEWTLE     // 10
+pokemon SPECIES_MAREEP      // 10
+pokemon SPECIES_MAREEP      // 10
+pokemon SPECIES_EKANS       // 5
+pokemon SPECIES_NATU        // 5
+pokemon SPECIES_NINCADA     // 4
+pokemon SPECIES_NATU        // 4
+pokemon SPECIES_NINCADA     // 1
+pokemon SPECIES_MAREEP      // 1
 
 // night encounter slots
-pokemon SPECIES_WOOPER
-pokemon SPECIES_RATTATA
-pokemon SPECIES_WOOPER
-pokemon SPECIES_RATTATA
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_BELLSPROUT
-pokemon SPECIES_MAREEP
-pokemon SPECIES_MAREEP
-pokemon SPECIES_WOOPER
-pokemon SPECIES_ZUBAT
-pokemon SPECIES_WOOPER
-pokemon SPECIES_ZUBAT
+pokemon SPECIES_MURKROW         // 20
+pokemon SPECIES_WOOPER          // 20  
+pokemon SPECIES_BELLSPROUT      // 10
+pokemon SPECIES_CHEWTLE         // 10
+pokemon SPECIES_ELECTRIKE       // 10
+pokemon SPECIES_ELECTRIKE       // 10
+pokemon SPECIES_SKORUPI         // 5
+monwithform SPECIES_YAMASK, 1   // 5
+pokemon SPECIES_MURKROW         // 4
+monwithform SPECIES_YAMASK, 1   // 4
+pokemon SPECIES_MURKROW         // 1
+pokemon SPECIES_ELECTRIKE       // 1
 
 // hoenn encounter slots
 pokemon SPECIES_WHISMUR
@@ -6664,57 +6664,57 @@ pokemon SPECIES_NONE
 .close
 
 
-encounterdata  64   // ???
+encounterdata  64   // Ruins of Alph (Ladder Room) [NEW]
 
-walkrate 0
+walkrate 15
 surfrate 0
 rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+walklevels 6, 4, 6, 4, 6, 6, 6, 6, 6, 4, 6, 4
 
 // morning encounter slots
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
+pokemon SPECIES_BRONZOR         // 20
+pokemon SPECIES_NATU            // 20
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_ESPURR          // 10
+pokemon SPECIES_DUSKULL         // 10
+pokemon SPECIES_CHINGLING       // 10
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_CHINGLING       // 5
+pokemon SPECIES_DUSKULL         // 4
+pokemon SPECIES_ELGYEM          // 4
+pokemon SPECIES_ELGYEM          // 1
+monwithform SPECIES_YAMASK, 1   // 1
 
 // day encounter slots
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
+pokemon SPECIES_BRONZOR         // 20
+pokemon SPECIES_NATU            // 20
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_ESPURR          // 10
+pokemon SPECIES_DUSKULL         // 10
+pokemon SPECIES_CHINGLING       // 10
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_CHINGLING       // 5
+pokemon SPECIES_DUSKULL         // 4
+pokemon SPECIES_ELGYEM          // 4
+pokemon SPECIES_ELGYEM          // 1
+monwithform SPECIES_YAMASK, 1   // 1
 
 // night encounter slots
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
-pokemon SPECIES_NONE
+pokemon SPECIES_BRONZOR         // 20
+pokemon SPECIES_NATU            // 20
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_ESPURR          // 10
+pokemon SPECIES_DUSKULL         // 10
+pokemon SPECIES_CHINGLING       // 10
+monwithform SPECIES_YAMASK, 1   // 10
+pokemon SPECIES_CHINGLING       // 5
+pokemon SPECIES_DUSKULL         // 4
+pokemon SPECIES_ELGYEM          // 4
+pokemon SPECIES_ELGYEM          // 1
+monwithform SPECIES_YAMASK, 1   // 1
 
 // hoenn encounter slots
 pokemon SPECIES_NONE
