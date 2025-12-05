@@ -18,5 +18,3 @@ bank 237 is mon names.  238 appears unused?
 
 
 starter ID's can be found in overlay 61, starting from 0x1A98
-
-TextPlayerName 0
