@@ -3618,7 +3618,7 @@
       },
       {
         "Level": 8,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_CHARGE"
       },
       {
         "Level": 12,
@@ -3873,7 +3873,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_CHARGE"
       },
       {
         "Level": 1,
@@ -21895,7 +21895,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_BUG_BITE"
       },
       {
         "Level": 20,
@@ -31811,7 +31811,7 @@
       },
       {
         "Level": 5,
-        "Move": "MOVE_STORED_POWER"
+        "Move": "MOVE_CONFUSION"
       },
       {
         "Level": 10,
@@ -31824,6 +31824,10 @@
       {
         "Level": 20,
         "Move": "MOVE_NIGHT_SHADE"
+      },
+      {
+        "Level": 23,
+        "Move": "MOVE_PSYBEAM"
       },
       {
         "Level": 26,
@@ -31989,12 +31993,20 @@
         "Move": "MOVE_TELEPORT"
       },
       {
+        "Level": 8,
+        "Move": "MOVE_CONFUSION"
+      },
+      {
         "Level": 15,
         "Move": "MOVE_CONFUSE_RAY"
       },
       {
         "Level": 20,
         "Move": "MOVE_NIGHT_SHADE"
+      },
+      {
+        "Level": 23,
+        "Move": "MOVE_PSYBEAM"
       },
       {
         "Level": 28,
@@ -34678,7 +34690,7 @@
       },
       {
         "Level": 11,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_POUNCE"
       },
       {
         "Level": 14,
@@ -38150,7 +38162,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_BUG_BITE"
       },
       {
         "Level": 20,
@@ -45164,7 +45176,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_TRAILBLAZE"
       },
       {
         "Level": 30,
@@ -45357,7 +45369,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_TRAILBLAZE"
       },
       {
         "Level": 40,
@@ -45570,7 +45582,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_TRAILBLAZE"
       },
       {
         "Level": 42,
@@ -49148,7 +49160,7 @@
       },
       {
         "Level": 17,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_PURSUIT"
       },
       {
         "Level": 21,
@@ -49285,7 +49297,7 @@
       },
       {
         "Level": 17,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_PURSUIT"
       },
       {
         "Level": 21,
@@ -49726,7 +49738,7 @@
       },
       {
         "Level": 3,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_ENCORE"
       },
       {
         "Level": 6,
@@ -49929,7 +49941,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_ENCORE"
       },
       {
         "Level": 1,
@@ -50143,7 +50155,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_ENCORE"
       },
       {
         "Level": 1,
@@ -51653,14 +51665,6 @@
       {
         "Level": 0,
         "Move": "MOVE_FURY_CUTTER"
-      },
-      {
-        "Level": 0,
-        "Move": "MOVE_DOUBLE_TEAM"
-      },
-      {
-        "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
       },
       {
         "Level": 1,
@@ -55572,7 +55576,7 @@
       },
       {
         "Level": 5,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_THUNDER_SHOCK"
       },
       {
         "Level": 8,
@@ -55593,6 +55597,10 @@
       {
         "Level": 22,
         "Move": "MOVE_TAIL_GLOW"
+      },
+      {
+        "Level": 24,
+        "Move": "MOVE_SHOCK_WAVE"
       },
       {
         "Level": 26,
@@ -55617,6 +55625,10 @@
       {
         "Level": 43,
         "Move": "MOVE_DOUBLE_EDGE"
+      },
+      {
+        "Level": 45,
+        "Move": "MOVE_THUNDERBOLT"
       },
       {
         "Level": 47,
@@ -63577,7 +63589,7 @@
       },
       {
         "Level": 5,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_HOWL"
       },
       {
         "Level": 10,
@@ -63823,7 +63835,7 @@
       },
       {
         "Level": 10,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_ABSORB"
       },
       {
         "Level": 15,
@@ -63960,7 +63972,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_HAIL"
       },
       {
         "Level": 1,
@@ -70138,7 +70150,7 @@
       },
       {
         "Level": 13,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_CONFIDE"
       },
       {
         "Level": 17,
@@ -70265,7 +70277,7 @@
       },
       {
         "Level": 13,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_CONFIDE"
       },
       {
         "Level": 18,
@@ -70397,7 +70409,7 @@
       },
       {
         "Level": 13,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_CONFIDE"
       },
       {
         "Level": 18,
@@ -81228,7 +81240,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DOUBLE_TEAM"
+        "Move": "MOVE_POUNCE"
       },
       {
         "Level": 1,

@@ -16563,13 +16563,13 @@ trainerdata 486, "Proton"
 
         // mon 1
         ivs 100
-        abilityslot 0
+        abilityslot 2
         level 20
-        pokemon SPECIES_MAKUHITA
+        pokemon SPECIES_SCRAGGY
         item ITEM_NONE
-        move MOVE_BULLET_PUNCH
-        move MOVE_FAKE_OUT
-        move MOVE_FORCE_PALM
+        move MOVE_LOW_SWEEP
+        move MOVE_DRAGON_DANCE
+        move MOVE_FEINT_ATTACK
         move MOVE_ROCK_TOMB
         ballseal 0
 
@@ -16580,18 +16580,18 @@ trainerdata 486, "Proton"
         pokemon SPECIES_QWILFISH
         item ITEM_NONE
         move MOVE_BARB_BARRAGE
-        move MOVE_PAYBACK
+        move MOVE_ASSURANCE
         move MOVE_AQUA_JET
-        move MOVE_POISON_TAIL
+        move MOVE_REVENGE
         ballseal 0
 
         // mon 3
         ivs 100
         abilityslot 0
         level 21
-        pokemon SPECIES_LAMPENT
-        item ITEM_PASSHO_BERRY
-        move MOVE_FLAME_BURST
+        pokemon SPECIES_MISDREAVUS
+        item ITEM_COLBUR_BERRY
+        move MOVE_PSYBEAM
         move MOVE_HEX
         move MOVE_WILL_O_WISP
         move MOVE_SHOCK_WAVE

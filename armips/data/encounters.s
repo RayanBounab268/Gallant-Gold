@@ -7200,8 +7200,8 @@ walklevels 3, 2, 3, 2, 2, 2, 4, 4, 3, 4, 3, 4
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
     pokemon SPECIES_GEODUDE
-    pokemon SPECIES_NACLI
-    pokemon SPECIES_NACLI
+    pokemon SPECIES_ROGGENROLA
+    pokemon SPECIES_ARON
     pokemon SPECIES_DUNSPARCE
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
@@ -7214,8 +7214,8 @@ walklevels 3, 2, 3, 2, 2, 2, 4, 4, 3, 4, 3, 4
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
     pokemon SPECIES_GEODUDE
-    pokemon SPECIES_NACLI
-    pokemon SPECIES_NACLI
+    pokemon SPECIES_ROGGENROLA
+    pokemon SPECIES_ARON
     pokemon SPECIES_DUNSPARCE
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
@@ -7228,8 +7228,8 @@ walklevels 3, 2, 3, 2, 2, 2, 4, 4, 3, 4, 3, 4
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
     pokemon SPECIES_GEODUDE
-    pokemon SPECIES_NACLI
-    pokemon SPECIES_NACLI
+    pokemon SPECIES_ROGGENROLA
+    pokemon SPECIES_ARON
     pokemon SPECIES_DUNSPARCE
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
