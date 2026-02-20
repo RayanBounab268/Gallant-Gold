@@ -26725,7 +26725,7 @@ mondata SPECIES_MORPEKO_HANGRY, "-----"
 
 
 mondata SPECIES_ZACIAN_CROWNED, "-----"
-    basestats 92, 170, 115, 148, 80, 115
+    basestats 92, 150, 115, 148, 80, 115
     types TYPE_FAIRY, TYPE_STEEL
     catchrate 10
     baseexp 0 // defined in baseexp.s
@@ -26742,7 +26742,7 @@ mondata SPECIES_ZACIAN_CROWNED, "-----"
 
 
 mondata SPECIES_ZAMAZENTA_CROWNED, "-----"
-    basestats 92, 130, 145, 128, 80, 145
+    basestats 92, 120, 140, 128, 80, 140
     types TYPE_FIGHTING, TYPE_STEEL
     catchrate 10
     baseexp 0 // defined in baseexp.s
@@ -27303,7 +27303,7 @@ mondata SPECIES_MEOWSTIC_FEMALE, "-----"
 
 
 mondata SPECIES_INDEEDEE_FEMALE, "-----"
-    basestats 60, 65, 55, 95, 105, 95
+    basestats 60, 55, 65, 85, 95, 105
     types TYPE_PSYCHIC, TYPE_NORMAL
     catchrate 30
     baseexp 0 // defined in baseexp.s
@@ -27320,7 +27320,7 @@ mondata SPECIES_INDEEDEE_FEMALE, "-----"
 
 
 mondata SPECIES_BASCULEGION_FEMALE, "-----"
-    basestats 120, 112, 65, 78, 80, 75
+    basestats 120, 92, 65, 78, 100, 75
     types TYPE_WATER, TYPE_GHOST
     catchrate 135
     baseexp 0 // defined in baseexp.s

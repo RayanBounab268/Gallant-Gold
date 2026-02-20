@@ -208,10 +208,26 @@ u16 move_effect_to_subscripts[] =
     [ADD_STATUS_EFF_BOOST_STATS_ATTACK_UP_6]        = SUB_SEQ_BOOST_STATS, // attack +6
     [ADD_STATUS_EFF_BOOST_STATS_DEFENSE_UP_6]       = SUB_SEQ_BOOST_STATS, // defense +6
     [ADD_STATUS_EFF_BOOST_STATS_SPEED_UP_6]         = SUB_SEQ_BOOST_STATS, // speed +6
-    [ADD_STATUS_EFF_ADD_THIRD_TYPE_GRASS]           = SUB_SEQ_ADD_THIRD_TYPE_GRASS,
-    [ADD_STATUS_EFF_ADD_THIRD_TYPE_GHOST]           = SUB_SEQ_ADD_THIRD_TYPE_GHOST,
+    [ADD_STATUS_EFF_ADD_TYPE_GRASS]                 = SUB_SEQ_ADD_TYPE_GRASS,
+    [ADD_STATUS_EFF_ADD_TYPE_GHOST]                 = SUB_SEQ_ADD_TYPE_GHOST,
     [ADD_STATUS_EFF_CHANGE_TARGET_TO_PSYCHIC_TYPE]  = SUB_SEQ_CHANGE_TARGET_TO_PSYCHIC_TYPE,
     [ADD_STATUS_EFF_AURORA_VEIL]                    = SUB_SEQ_AURORA_VEIL,
+    [ADD_STATUS_EFF_STRENGTH_SAP]                   = SUB_SEQ_STRENGTH_SAP,
+    [ADD_STATUS_EFF_HEAL_PULSE]                     = SUB_SEQ_HEAL_PULSE,
+    [ADD_STATUS_EFF_POLLEN_PUFF_HEAL]               = SUB_SEQ_POLLEN_PUFF_HEAL,
+    [ADD_STATUS_EFF_COACHING]                       = SUB_SEQ_COACHING,
+    [ADD_STATUS_EFF_LIFE_DEW]                       = SUB_SEQ_LIFE_DEW,
+    [ADD_STATUS_EFF_ENTRAINMENT]                    = SUB_SEQ_ENTRAINMENT,
+    [ADD_STATUS_EFF_HOWL]                           = SUB_SEQ_HOWL,
+    [ADD_STATUS_EFF_DECORATE]                       = SUB_SEQ_DECORATE,
+    [ADD_STATUS_EFF_PARTING_SHOT]                   = SUB_SEQ_HANDLE_PARTING_SHOT,
+    [ADD_STATUS_EFF_CLEAR_SMOG]                     = SUB_SEQ_HANDLE_CLEAR_SMOG,
+    [ADD_STATUS_EFF_ION_DELUGE]                     = SUB_SEQ_ION_DELUGE,
+    [ADD_STATUS_EFF_REMOVE_USER_FIRE_TYPE]          = SUB_SEQ_REMOVE_USER_FIRE_TYPE,
+    [ADD_STATUS_EFF_REMOVE_USER_ELECTRIC_TYPE]      = SUB_SEQ_REMOVE_USER_ELECTRIC_TYPE,
+    [ADD_STATUS_EFF_STUFF_CHEEKS]                   = SUB_SEQ_STUFF_CHEEKS,
+    [ADD_STATUS_EFF_POWDER]                         = SUB_SEQ_POWDER,
+    [ADD_STATUS_EFF_LASER_FOCUS]                    = SUB_SEQ_LASER_FOCUS,
 };
 
 
@@ -271,4 +287,19 @@ u32 LONG_CALL GetMoveData(u16 id, u32 field)
     sys_FreeMemoryEz(bm);
 
     return ret;
+}
+
+/**
+ *  @brief check if a move is unimplemented
+ *
+ *  @param move move ID to check
+ *  @return TRUE if move is unimplemented; FALSE otherwise
+ */
+BOOL LONG_CALL IsMoveUnimplemented(u16 move)
+{
+#ifdef BLOCK_LEARNING_UNIMPLEMENTED_MOVES
+    return (GetMoveData(move, MOVE_DATA_FLAGS) & FLAG_UNUSED_MOVE) != 0;
+#else
+    return FALSE;
+#endif
 }
