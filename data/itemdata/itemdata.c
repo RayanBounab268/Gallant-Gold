@@ -3263,11 +3263,7 @@ const ITEMDATA __data[] =
 
 [ITEM_RARE_CANDY] =
 {
-<<<<<<< HEAD
-    .price = 0,
-=======
     ITEM_PRICE(10000),
->>>>>>> upstream/main
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,
@@ -5087,11 +5083,7 @@ const ITEMDATA __data[] =
 
 [ITEM_ESCAPE_ROPE] =
 {
-<<<<<<< HEAD
     .price = 0,
-=======
-    ITEM_PRICE(550),
->>>>>>> upstream/main
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,

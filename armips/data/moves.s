@@ -3050,11 +3050,11 @@ movedata MOVE_MUD_SLAP, "Mud-Slap"
     movedescription MOVE_MUD_SLAP, "The user hurls mud in\nthe foe’s face to\ninflict damage and\nlower its accuracy.\n"
 
 movedata MOVE_OCTAZOOKA, "Octazooka"
-    battleeffect MOVE_EFFECT_LOWER_ACCURACY_HIT
+    battleeffect MOVE_EFFECT_LOWER_SPEED_HIT
     pss SPLIT_SPECIAL
-    basepower 65
+    basepower 80
     type TYPE_WATER
-    accuracy 85
+    accuracy 100
     pp 10
     effectchance 50
     target RANGE_SINGLE_TARGET
@@ -3063,7 +3063,7 @@ movedata MOVE_OCTAZOOKA, "Octazooka"
     appeal APPEAL_VOLTAGE_HEARTS
     contesttype CONTEST_TOUGH
     terminatedata
-    movedescription MOVE_OCTAZOOKA, "The user attacks by\nspraying ink in the\nfoe’s face or eyes.\nIt may also lower the\ntarget’s accuracy."
+    movedescription MOVE_OCTAZOOKA, "The user attacks by\nspraying ink in the\nfoe’s face or eyes.\nIt may also lower the\ntarget’s speed."
 
 movedata MOVE_SPIKES, "Spikes"
     battleeffect MOVE_EFFECT_SET_SPIKES

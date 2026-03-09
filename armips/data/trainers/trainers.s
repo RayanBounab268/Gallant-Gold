@@ -16575,7 +16575,7 @@ trainerdata 486, "Proton"
 
         // mon 2
         ivs 100
-        abilityslot 0
+        abilityslot 2
         level 20
         pokemon SPECIES_QWILFISH
         item ITEM_NONE
@@ -26423,5 +26423,666 @@ trainerdata 742, "Lyra"
         abilityslot 0
         level 9
         pokemon SPECIES_VULPIX
+        ballseal 0
+    endparty
+
+// HP EV Trainer
+trainerdata 743, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 743
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 5
+        pokemon SPECIES_BLISSEY
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+// ATK EV Trainer
+trainerdata 744, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 744
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 14
+        pokemon SPECIES_SHIFTRY
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+// DEF EV Trainer
+trainerdata 745, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 745
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 35
+        pokemon SPECIES_OBSTAGOON
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+// SP.ATK EV Trainer
+trainerdata 746, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 746
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 30
+        pokemon SPECIES_GARDEVOIR
+        move MOVE_HEALING_WISH
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+// SP.DEF EV Trainer
+trainerdata 747, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 747
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_DUSTOX
+        move MOVE_MEMENTO
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+// SPD EV Trainer
+trainerdata 748, "Evan"
+    trainermontype TRAINER_DATA_TYPE_MOVES
+    trainerclass TRAINERCLASS_PKMN_BREEDER_M
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 748
+        // mon 0
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 1
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 2
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 3
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 4
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+
+        // mon 5
+        ivs 0
+        abilityslot 0
+        level 10
+        pokemon SPECIES_RAICHU
+        move MOVE_TAIL_WHIP
+        move MOVE_NONE
+        move MOVE_NONE
+        move MOVE_NONE
+        ballseal 0
+    endparty
+
+trainerdata 749, "Ariana"
+    trainermontype TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_BALL | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET
+    trainerclass TRAINERCLASS_EXECUTIVE_ARIANA
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE 
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    // party 749
+    party 749
+        ivs 200
+        abilityslot 1
+        level 42
+        monwithform SPECIES_PYROAR, 1
+        item ITEM_NONE
+        move MOVE_FLAMETHROWER
+        move MOVE_YAWN
+        move MOVE_DARK_PULSE
+        move MOVE_HYPER_VOICE
+        ball ITEM_LOVE_BALL
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 0, 0, 0, 252, 252, 6
+        nature NATURE_TIMID
+        ballseal 0
+    
+        ivs 200
+        abilityslot 0
+        level 42
+        monwithform SPECIES_JELLICENT, 1
+        item ITEM_LEFTOVERS
+        move MOVE_SURF
+        move MOVE_DAZZLING_GLEAM
+        move MOVE_SHADOW_BALL
+        move MOVE_RECOVER
+        ball ITEM_LOVE_BALL
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 248, 0, 0, 8, 224, 8
+        nature NATURE_MODEST
+        ballseal 0
+    
+        ivs 200
+        abilityslot 0
+        level 42
+        pokemon SPECIES_TSAREENA
+        item ITEM_NONE
+        move MOVE_TROP_KICK
+        move MOVE_RAPID_SPIN
+        move MOVE_U_TURN
+        move MOVE_PLAY_ROUGH
+        ball ITEM_LOVE_BALL
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 244, 252, 0, 0, 0, 8 // do not have to respect 510 limit
+        nature NATURE_ADAMANT
+        ballseal 0
+    
+        ivs 200
+        abilityslot 0
+        level 42
+        pokemon SPECIES_NIDOQUEEN
+        item ITEM_BLACK_SLUDGE
+        move MOVE_DRAGON_TAIL
+        move MOVE_DRILL_RUN
+        move MOVE_BODY_PRESS
+        move MOVE_CURSE
+        ball ITEM_LOVE_BALL
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 252, 248, 0, 0, 0, 8
+        nature NATURE_IMPISH
+        ballseal 0
+
+        ivs 250
+        abilityslot 0
+        level 43
+        pokemon SPECIES_JYNX
+        item ITEM_TWISTED_SPOON
+        move MOVE_ICE_BEAM
+        move MOVE_FAKE_OUT
+        move MOVE_PSYCHIC
+        move MOVE_NASTY_PLOT
+        ball ITEM_LOVE_BALL
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 6, 0, 0, 252, 252, 0
+        nature NATURE_TIMID
+        ballseal 0
+    
+        ivs 250
+        abilityslot 1
+        level 43
+        pokemon SPECIES_KANGASKHAN
+        item ITEM_EXPERT_BELT
+        move MOVE_BODY_SLAM
+        move MOVE_DRAIN_PUNCH
+        move MOVE_ROCK_SLIDE
+        move MOVE_FAKE_OUT
+        ball ITEM_LOVE_BALL
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 6, 252, 0, 252, 0, 0
+        nature NATURE_ADAMANT
+        ballseal 0
+    endparty
+
+trainerdata 750, "Gorigan"
+    trainermontype TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS
+    trainerclass TRAINERCLASS_BIKER
+    nummons 5
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE 
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype DOUBLE_BATTLE
+    endentry
+
+    // party 750
+    party 750
+        ivs 100
+        abilityslot 1
+        level 28
+        pokemon SPECIES_ORANGURU
+        item ITEM_NONE
+        move MOVE_SWIFT
+        move MOVE_REFLECT
+        move MOVE_LIGHT_SCREEN
+        move MOVE_BULLDOZE
+        ballseal 0
+    
+        ivs 100
+        abilityslot 0
+        level 28
+        pokemon SPECIES_PRIMEAPE
+        item ITEM_NONE
+        move MOVE_BULLDOZE
+        move MOVE_ICE_PUNCH
+        move MOVE_BRICK_BREAK
+        move MOVE_ROCK_SLIDE
+        ballseal 0
+    
+        ivs 100
+        abilityslot 0
+        level 29
+        pokemon SPECIES_SHIFTRY
+        item ITEM_NONE
+        move MOVE_ICY_WIND
+        move MOVE_SUCKER_PUNCH
+        move MOVE_PETAL_BLIZZARD
+        move MOVE_FAKE_OUT
+        ballseal 0
+    
+        ivs 100
+        abilityslot 0
+        level 29
+        pokemon SPECIES_KROKOROK
+        item ITEM_NONE
+        move MOVE_BULLDOZE
+        move MOVE_REVENGE
+        move MOVE_CRUNCH
+        move MOVE_FIRE_FANG
+        ballseal 0
+
+        ivs 100
+        abilityslot 0
+        level 30
+        pokemon SPECIES_SIMISEAR
+        item ITEM_PETAYA_BERRY
+        move MOVE_FLAME_BURST
+        move MOVE_ROCK_SLIDE
+        move MOVE_WILL_O_WISP
+        move MOVE_PROTECT
         ballseal 0
     endparty

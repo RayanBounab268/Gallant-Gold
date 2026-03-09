@@ -32477,7 +32477,7 @@
     "LevelMoves": [
       {
         "Level": 0,
-        "Move": "MOVE_THUNDER_PUNCH"
+        "Move": "MOVE_SHOCK_WAVE"
       },
       {
         "Level": 1,
@@ -40141,30 +40141,54 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_BUBBLE"
+        "Move": "MOVE_WATER_GUN"
       },
       {
-        "Level": 6,
-        "Move": "MOVE_ACID_SPRAY"
+        "Level": 1,
+        "Move": "MOVE_HELPING_HAND"
       },
       {
-        "Level": 11,
-        "Move": "MOVE_CHARGE_BEAM"
-      },
-      {
-        "Level": 18,
+        "Level": 4,
         "Move": "MOVE_WATER_PULSE"
       },
       {
-        "Level": 25,
+        "Level": 8,
+        "Move": "MOVE_FOCUS_ENERGY"
+      },
+      {
+        "Level": 12,
+        "Move": "MOVE_PSYBEAM"
+      },
+      {
+        "Level": 16,
+        "Move": "MOVE_AURORA_BEAM"
+      },
+      {
+        "Level": 20,
+        "Move": "MOVE_BUBBLE_BEAM"
+      },
+      {
+        "Level": 24,
+        "Move": "MOVE_LOCK_ON"
+      },
+      {
+        "Level": 28,
+        "Move": "MOVE_BULLET_SEED"
+      },
+      {
+        "Level": 32,
         "Move": "MOVE_ICE_BEAM"
       },
       {
-        "Level": 34,
+        "Level": 36,
         "Move": "MOVE_HYDRO_PUMP"
       },
       {
-        "Level": 43,
+        "Level": 40,
+        "Move": "MOVE_SOAK"
+      },
+      {
+        "Level": 44,
         "Move": "MOVE_HYPER_BEAM"
       }
     ],
@@ -40277,30 +40301,70 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_BUBBLE"
+        "Move": "MOVE_OCTAZOOKA"
       },
       {
-        "Level": 6,
-        "Move": "MOVE_ACID_SPRAY"
+        "Level": 1,
+        "Move": "MOVE_GUNK_SHOT"
       },
       {
-        "Level": 11,
-        "Move": "MOVE_CHARGE_BEAM"
+        "Level": 1,
+        "Move": "MOVE_ROCK_BLAST"
       },
       {
-        "Level": 18,
+        "Level": 1,
+        "Move": "MOVE_HELPING_HAND"
+      },
+      {
+        "Level": 1,
+        "Move": "MOVE_WATER_GUN"
+      },
+      {
+        "Level": 1,
+        "Move": "MOVE_WRAP"
+      },
+      {
+        "Level": 1,
         "Move": "MOVE_WATER_PULSE"
       },
       {
-        "Level": 25,
+        "Level": 1,
+        "Move": "MOVE_FOCUS_ENERGY"
+      },
+      {
+        "Level": 12,
+        "Move": "MOVE_PSYBEAM"
+      },
+      {
+        "Level": 16,
+        "Move": "MOVE_AURORA_BEAM"
+      },
+      {
+        "Level": 20,
+        "Move": "MOVE_BUBBLE_BEAM"
+      },
+      {
+        "Level": 24,
+        "Move": "MOVE_LOCK_ON"
+      },
+      {
+        "Level": 30,
+        "Move": "MOVE_BULLET_SEED"
+      },
+      {
+        "Level": 36,
         "Move": "MOVE_ICE_BEAM"
       },
       {
-        "Level": 34,
+        "Level": 42,
         "Move": "MOVE_HYDRO_PUMP"
       },
       {
-        "Level": 43,
+        "Level": 48,
+        "Move": "MOVE_SOAK"
+      },
+      {
+        "Level": 54,
         "Move": "MOVE_HYPER_BEAM"
       }
     ],
@@ -47615,7 +47679,8 @@
       }
     ],
     "MachineMoves": [],
-    "EggMoves": [],
+    "EggMoves": ["MOVE_MEMENTO"
+    ],
     "TutorMoves": [
       "MOVE_BUG_BITE",
       "MOVE_ELECTROWEB",

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 the {COLOR 255}Candy Box{COLOR 0}
-=======
-a {COLOR 255}Custom Item{COLOR 0}
->>>>>>> upstream/main
