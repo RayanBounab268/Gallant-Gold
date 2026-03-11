@@ -27053,7 +27053,7 @@ trainerdata 750, "Gorigan"
         item ITEM_NONE
         move MOVE_BULLDOZE
         move MOVE_FOCUS_ENERGY
-        move MOVE_KARATE_CHOP
+        move MOVE_LOW_SWEEP
         move MOVE_ROCK_SLIDE
         ballseal 0
     
@@ -27136,7 +27136,7 @@ trainerdata 751, "Rick"
 trainerdata 752, "Lemuel"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass TRAINERCLASS_BUG_CATCHER
-    nummons 5
+    nummons 4
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE 
@@ -27178,7 +27178,7 @@ trainerdata 752, "Lemuel"
 trainerdata 753, "Neely"
     trainermontype TRAINER_DATA_TYPE_NOTHING
     trainerclass TRAINERCLASS_BUG_CATCHER
-    nummons 4
+    nummons 5
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE 
