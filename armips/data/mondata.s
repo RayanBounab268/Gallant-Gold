@@ -17141,7 +17141,7 @@ mondata SPECIES_ORANGURU, "Oranguru"
     basefriendship 50
     growthrate GROWTH_SLOW
     egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
-    abilities ABILITY_INNER_FOCUS, ABILITY_NONE
+    abilities ABILITY_INNER_FOCUS, ABILITY_TELEPATHY
     runchance 0
     colorflip BODY_COLOR_WHITE, 0
     mondexentry SPECIES_ORANGURU, "Known for its extreme intelligence, it\nwill look down on inexperienced\nTrainers."

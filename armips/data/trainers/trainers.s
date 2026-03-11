@@ -26924,8 +26924,8 @@ trainerdata 749, "Ariana"
     battletype SINGLE_BATTLE
     endentry
 
-    // party 749
     party 749
+        // mon 0
         ivs 200
         abilityslot 1
         level 42
@@ -26941,6 +26941,7 @@ trainerdata 749, "Ariana"
         nature NATURE_TIMID
         ballseal 0
     
+        // mon 1
         ivs 200
         abilityslot 0
         level 42
@@ -26956,6 +26957,7 @@ trainerdata 749, "Ariana"
         nature NATURE_MODEST
         ballseal 0
     
+        // mon 2
         ivs 200
         abilityslot 0
         level 42
@@ -26971,6 +26973,7 @@ trainerdata 749, "Ariana"
         nature NATURE_ADAMANT
         ballseal 0
     
+        // mon 3
         ivs 200
         abilityslot 0
         level 42
@@ -26986,6 +26989,7 @@ trainerdata 749, "Ariana"
         nature NATURE_IMPISH
         ballseal 0
 
+        // mon 4
         ivs 250
         abilityslot 0
         level 43
@@ -27001,6 +27005,7 @@ trainerdata 749, "Ariana"
         nature NATURE_TIMID
         ballseal 0
     
+        // mon 5
         ivs 250
         abilityslot 1
         level 43
@@ -27029,7 +27034,6 @@ trainerdata 750, "Gorigan"
     battletype DOUBLE_BATTLE
     endentry
 
-    // party 750
     party 750
         ivs 100
         abilityslot 1
@@ -27048,8 +27052,8 @@ trainerdata 750, "Gorigan"
         pokemon SPECIES_PRIMEAPE
         item ITEM_NONE
         move MOVE_BULLDOZE
-        move MOVE_ICE_PUNCH
-        move MOVE_BRICK_BREAK
+        move MOVE_FOCUS_ENERGY
+        move MOVE_KARATE_CHOP
         move MOVE_ROCK_SLIDE
         ballseal 0
     
@@ -27083,6 +27087,139 @@ trainerdata 750, "Gorigan"
         move MOVE_FLAME_BURST
         move MOVE_ROCK_SLIDE
         move MOVE_WILL_O_WISP
-        move MOVE_PROTECT
+        move MOVE_BRICK_BREAK
+        ballseal 0
+    endparty
+
+trainerdata 751, "Rick"
+    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainerclass TRAINERCLASS_BUG_CATCHER
+    nummons 4
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE 
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 751
+        // mon 0
+        ivs 30
+        abilityslot 0
+        level 23
+        pokemon SPECIES_BUTTERFREE
+        ballseal 0
+    
+        // mon 1
+        ivs 30
+        abilityslot 0
+        level 23
+        pokemon SPECIES_DUSTOX
+        ballseal 0
+    
+        // mon 2
+        ivs 30
+        abilityslot 0
+        level 23
+        pokemon SPECIES_ARAQUANID
+        ballseal 0
+
+        // mon 3
+        ivs 30
+        abilityslot 0
+        level 24
+        pokemon SPECIES_LOKIX
+        ballseal 0
+    endparty
+
+trainerdata 752, "Lemuel"
+    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainerclass TRAINERCLASS_BUG_CATCHER
+    nummons 5
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE 
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 752
+        // mon 0
+        ivs 30
+        abilityslot 0
+        level 21
+        pokemon SPECIES_BEEDRILL
+        ballseal 0
+    
+        // mon 1
+        ivs 30
+        abilityslot 0
+        level 21
+        pokemon SPECIES_YANMA
+        ballseal 0
+    
+        // mon 2
+        ivs 30
+        abilityslot 0
+        level 22
+        pokemon SPECIES_WHIRLIPEDE
+        ballseal 0
+        
+        // mon 3
+        ivs 30
+        abilityslot 0
+        level 22
+        pokemon SPECIES_VOLBEAT
+        ballseal 0
+    endparty
+
+trainerdata 753, "Neely"
+    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainerclass TRAINERCLASS_BUG_CATCHER
+    nummons 4
+    item ITEM_NONE
+    item ITEM_NONE
+    item ITEM_NONE 
+    item ITEM_NONE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
+    battletype SINGLE_BATTLE
+    endentry
+
+    party 753
+        // mon 0
+        ivs 30
+        abilityslot 0
+        level 20
+        pokemon SPECIES_NINJASK
+        ballseal 0
+    
+        // mon 1
+        ivs 30
+        abilityslot 0
+        level 20
+        pokemon SPECIES_SWADLOON
+        ballseal 0
+    
+        // mon 2
+        ivs 30
+        abilityslot 0
+        level 21
+        pokemon SPECIES_SKORUPI
+        ballseal 0
+
+        // mon 3
+        ivs 30
+        abilityslot 0
+        level 21
+        pokemon SPECIES_ILLUMISE
+        ballseal 0
+
+        // mon 4
+        ivs 30
+        abilityslot 0
+        level 20
+        pokemon SPECIES_SHEDINJA
         ballseal 0
     endparty

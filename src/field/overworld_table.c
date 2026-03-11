@@ -1677,6 +1677,7 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
     { .tag = 1797, .gfx = 1547, .callback_params = OVERWORLD_SIZE_SMALL}, // SPECIES_PECHARUNT
     // NEW_NPC_ENTRY(0), // TM Pokeball
     { .tag = NEW_NPC_START + 0, .gfx = NEW_NPC_GFX_START + 0, .callback_params = 0x0420},
+    { .tag = NEW_NPC_START + 1, .gfx = NEW_NPC_GFX_START + 1, .callback_params = 0x0000},
     { 0xFFFF, 0, 0},
 };
 

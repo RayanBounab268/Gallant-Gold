@@ -2099,46 +2099,46 @@ superrodrate 75
 walklevels 5, 6, 5, 6, 6, 6, 5, 5, 5, 6, 5, 6
 
 // morning encounter slots
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
+    pokemon SPECIES_SHROOMISH   // 20
+    pokemon SPECIES_NYMBLE      // 20
+    pokemon SPECIES_CATERPIE    // 10
+    pokemon SPECIES_BUNNELBY    // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_SKIDDO      // 10
+    pokemon SPECIES_RALTS       // 5
+    pokemon SPECIES_NYMBLE      // 5
+    pokemon SPECIES_ZUBAT       // 4
+    pokemon SPECIES_NYMBLE      // 4
+    pokemon SPECIES_ZUBAT       // 1
+    pokemon SPECIES_NYMBLE      // 1
 
 // day encounter slots
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_CATERPIE
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_METAPOD
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
+    pokemon SPECIES_SHROOMISH   // 20
+    pokemon SPECIES_NYMBLE      // 20
+    pokemon SPECIES_CATERPIE    // 10
+    pokemon SPECIES_BUNNELBY    // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_SKIDDO      // 10
+    pokemon SPECIES_RALTS       // 5
+    pokemon SPECIES_NYMBLE      // 5
+    pokemon SPECIES_ZUBAT       // 4
+    pokemon SPECIES_NYMBLE      // 4
+    pokemon SPECIES_ZUBAT       // 1
+    pokemon SPECIES_NYMBLE      // 1
 
 // night encounter slots
-    pokemon SPECIES_ODDISH
-    pokemon SPECIES_ODDISH
-    pokemon SPECIES_ODDISH
-    pokemon SPECIES_ODDISH
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
-    pokemon SPECIES_ZUBAT
-    pokemon SPECIES_PARAS
+    pokemon SPECIES_SHROOMISH   // 20
+    pokemon SPECIES_NYMBLE      // 20
+    pokemon SPECIES_ZUBAT       // 10
+    pokemon SPECIES_BUNNELBY    // 10
+    pokemon SPECIES_IMPIDIMP    // 10
+    pokemon SPECIES_SKIDDO      // 10
+    pokemon SPECIES_RALTS       // 5
+    pokemon SPECIES_NYMBLE      // 5
+    pokemon SPECIES_ZUBAT       // 4
+    pokemon SPECIES_NYMBLE      // 4
+    pokemon SPECIES_ZUBAT       // 1
+    pokemon SPECIES_NYMBLE      // 1
 
 // hoenn encounter slots
     pokemon SPECIES_SPOINK
@@ -2161,8 +2161,8 @@ walklevels 5, 6, 5, 6, 6, 6, 5, 5, 5, 6, 5, 6
 
 // old rod encounters
     encounter SPECIES_MAGIKARP, 10, 10
-    encounter SPECIES_MAGIKARP, 10, 10
-    encounter SPECIES_MAGIKARP, 10, 10
+    encounter SPECIES_PSYDUCK, 10, 10
+    encounter SPECIES_PSYDUCK, 10, 10
     encounter SPECIES_POLIWAG, 10, 10
     encounter SPECIES_POLIWAG, 10, 10
 
