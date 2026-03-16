@@ -132,6 +132,7 @@
 #define TRAINERCLASS_PKMN_TRAINER_DAWN_PT   128
 #define TRAINERCLASS_NPC_TRAINER_ETHAN      129
 #define TRAINERCLASS_NPC_TRAINER_LYRA       130
+#define TRAINERCLASS_CIPHER_ADMIN_GORIGAN   131
 
 // Only used to display attributes of phone contacts
 #define TRAINERCLASS_PHONE_MOM               200

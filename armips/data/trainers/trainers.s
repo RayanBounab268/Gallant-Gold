@@ -27024,7 +27024,7 @@ trainerdata 749, "Ariana"
 
 trainerdata 750, "Gorigan"
     trainermontype TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS
-    trainerclass TRAINERCLASS_BIKER
+    trainerclass TRAINERCLASS_CIPHER_ADMIN_GORIGAN
     nummons 5
     item ITEM_NONE
     item ITEM_NONE
