@@ -3865,6 +3865,9 @@ _1AF4: // Trainer 753
 /* Trainer 732 */ .halfword _184C
 /* Trainer 733 */ .halfword _1858
 /* Trainer 734 */ .halfword _185C
+/* Trainer 735 */ .halfword _0000
+/* Trainer 736 */ .halfword _0000
+/* Trainer 737 */ .halfword _0000
 /* Trainer 738 */ .halfword _1AD4
 /* Trainer 739 */ .halfword _1AD8
 /* Trainer 740 */ .halfword _1AE0
