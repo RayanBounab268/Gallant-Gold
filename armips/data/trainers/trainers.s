@@ -7842,12 +7842,13 @@ trainerdata 244, "Lance"
         ballseal 0
     endparty
 
+// Singles Will (Round 1)
 trainerdata 245, "Will"
-    trainermontype TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS
+    trainermontype TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET
     trainerclass TRAINERCLASS_ELITE_FOUR_WILL
-    nummons 5
-    item ITEM_FULL_RESTORE
-    item ITEM_FULL_RESTORE
+    nummons 6
+    item ITEM_NONE
+    item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
@@ -7857,62 +7858,92 @@ trainerdata 245, "Will"
     party 245
         // mon 0
         ivs 250
-        abilityslot 0
-        level 40
-        pokemon SPECIES_XATU
-        item ITEM_NONE
-        move MOVE_U_TURN
-        move MOVE_ME_FIRST
-        move MOVE_CONFUSE_RAY
+        abilityslot 2
+        level 73
+        monwithform SPECIES_SLOWKING, 1
+        item ITEM_ASSAULT_VEST
         move MOVE_PSYCHIC
+        move MOVE_SLUDGE_BOMB
+        move MOVE_SCALD
+        move MOVE_FLAMETHROWER
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 248, 0, 36, 0, 0, 224 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_CALM
         ballseal 0
 
         // mon 1
         ivs 250
         abilityslot 0
-        level 41
-        pokemon SPECIES_JYNX
-        item ITEM_NONE
-        move MOVE_DOUBLE_SLAP
-        move MOVE_LOVELY_KISS
-        move MOVE_ICE_PUNCH
+        level 73
+        pokemon SPECIES_WYRDEER
+        item ITEM_SILK_SCARF
         move MOVE_PSYCHIC
+        move MOVE_HYPER_BEAM
+        move MOVE_EARTH_POWER
+        move MOVE_SHADOW_BALL
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 252, 0, 0, 0, 252, 4 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_MODEST
         ballseal 0
 
         // mon 2
         ivs 250
-        abilityslot 0
-        level 41
-        pokemon SPECIES_EXEGGUTOR
-        item ITEM_NONE
-        move MOVE_REFLECT
-        move MOVE_HYPNOSIS
-        move MOVE_EGG_BOMB
-        move MOVE_PSYCHIC
+        abilityslot 2
+        level 73
+        pokemon SPECIES_VELUZA
+        item ITEM_LIFE_ORB
+        move MOVE_AQUA_CUTTER
+        move MOVE_PSYCHO_CUT
+        move MOVE_DRILL_RUN
+        move MOVE_CRUNCH
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 0, 252, 0, 252, 0, 4 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_JOLLY
         ballseal 0
 
         // mon 3
         ivs 250
-        abilityslot 32
-        level 41
-        pokemon SPECIES_SLOWBRO
-        item ITEM_NONE
-        move MOVE_CURSE
-        move MOVE_AMNESIA
-        move MOVE_WATER_PULSE
+        abilityslot 0
+        level 73
+        monwithform SPECIES_RAICHU, 1
+        item ITEM_AIR_BALLOON
         move MOVE_PSYCHIC
+        move MOVE_THUNDERBOLT
+        move MOVE_CALM_MIND
+        move MOVE_SURF
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 0, 0, 0, 252, 252, 4 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_TIMID
         ballseal 0
 
         // mon 4
         ivs 250
-        abilityslot 32
-        level 42
+        abilityslot 2
+        level 73
         pokemon SPECIES_XATU
-        item ITEM_SITRUS_BERRY
-        move MOVE_AERIAL_ACE
-        move MOVE_OMINOUS_WIND
-        move MOVE_CONFUSE_RAY
+        item ITEM_LEFTOVERS
         move MOVE_PSYCHIC
+        move MOVE_THUNDER_WAVE
+        move MOVE_U_TURN
+        move MOVE_ROOST
+        setivs 31, 0, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 252, 0, 0, 0, 4, 252 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_CALM
+        ballseal 0
+
+        // mon 5
+        ivs 250
+        abilityslot 1
+        level 74
+        pokemon SPECIES_GALLADE
+        item ITEM_GALLADITE
+        move MOVE_SACRED_SWORD
+        move MOVE_PSYCHO_CUT
+        move MOVE_X_SCISSOR
+        move MOVE_AQUA_CUTTER
+        setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spd, spatk, spdef
+        setevs 0, 252, 0, 252, 0, 4 // hp, atk, def, spd, spatk, spdef
+        nature NATURE_JOLLY
         ballseal 0
     endparty
 

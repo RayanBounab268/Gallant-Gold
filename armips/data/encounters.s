@@ -1789,9 +1789,9 @@ walklevels 6, 7, 6, 7, 6, 6, 6, 6, 8, 4, 8, 4
 // morning encounter slots
     pokemon SPECIES_SPEAROW     // 20
     pokemon SPECIES_HOPPIP      // 20
-    pokemon SPECIES_PANSAGE     // 10
-    pokemon SPECIES_PANSEAR     // 10
-    pokemon SPECIES_PANPOUR     // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_RALTS       // 10
     pokemon SPECIES_SPEAROW     // 10
     pokemon SPECIES_HOPPIP      // 5
     pokemon SPECIES_ZUBAT       // 5
@@ -1803,9 +1803,9 @@ walklevels 6, 7, 6, 7, 6, 6, 6, 6, 8, 4, 8, 4
 // day encounter slots
     pokemon SPECIES_SPEAROW     // 20
     pokemon SPECIES_HOPPIP      // 20
-    pokemon SPECIES_PANSAGE     // 10
-    pokemon SPECIES_PANSEAR     // 10
-    pokemon SPECIES_PANPOUR     // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_RALTS       // 10
+    pokemon SPECIES_RALTS       // 10
     pokemon SPECIES_SPEAROW     // 10
     pokemon SPECIES_HOPPIP      // 5
     pokemon SPECIES_ZUBAT       // 5
@@ -1817,9 +1817,9 @@ walklevels 6, 7, 6, 7, 6, 6, 6, 6, 8, 4, 8, 4
 // night encounter slots
     pokemon SPECIES_SPEAROW     // 20
     pokemon SPECIES_HOPPIP      // 20
-    pokemon SPECIES_PANSAGE     // 10
-    pokemon SPECIES_PANSEAR     // 10
-    pokemon SPECIES_PANPOUR     // 10
+    pokemon SPECIES_IMPIDIMP    // 10
+    pokemon SPECIES_IMPIDIMP    // 10
+    pokemon SPECIES_IMPIDIMP    // 10
     pokemon SPECIES_SPEAROW     // 10
     pokemon SPECIES_HOPPIP      // 5
     pokemon SPECIES_ZUBAT       // 5
