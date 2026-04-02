@@ -252,8 +252,8 @@ movedata MOVE_SWORDS_DANCE, "Swords Dance"
 movedata MOVE_CUT, "Cut"
     battleeffect MOVE_EFFECT_HIT
     pss SPLIT_PHYSICAL
-    basepower 50
-    type TYPE_NORMAL
+    basepower 65
+    type TYPE_STEEL
     accuracy 95
     pp 30
     effectchance 0
@@ -458,7 +458,7 @@ movedata MOVE_ROLLING_KICK, "Rolling Kick"
     movedescription MOVE_ROLLING_KICK, "The user lashes \nout with a quick,\nspinning kick. It\nmay also make the\ntarget flinch."
 
 movedata MOVE_SAND_ATTACK, "Sand Attack"
-    battleeffect MOVE_EFFECT_ACC_DOWN
+    battleeffect MOVE_EFFECT_SPEED_DOWN
     pss SPLIT_STATUS
     basepower 0
     type TYPE_GROUND
@@ -471,7 +471,7 @@ movedata MOVE_SAND_ATTACK, "Sand Attack"
     appeal APPEAL_KEEP_VOLTAGE_UP
     contesttype CONTEST_CUTE
     terminatedata
-    movedescription MOVE_SAND_ATTACK, "Sand is hurled in the\nfoe’s face, reducing\nits accuracy.\n\n"
+    movedescription MOVE_SAND_ATTACK, "Sand is hurled in the\nfoe’s face, reducing\nits speed.\n\n"
 
 movedata MOVE_HEADBUTT, "Headbutt"
     battleeffect MOVE_EFFECT_FLINCH_HIT
@@ -1130,13 +1130,13 @@ movedata MOVE_SEISMIC_TOSS, "Seismic Toss"
     movedescription MOVE_SEISMIC_TOSS, "The foe is thrown\nusing the power of\ngravity. It inflicts\ndamage equal to\nthe user’s level."
 
 movedata MOVE_STRENGTH, "Strength"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_RAISE_ATTACK_HIT
     pss SPLIT_PHYSICAL
-    basepower 80
+    basepower 100
     type TYPE_NORMAL
-    accuracy 100
+    accuracy 75
     pp 15
-    effectchance 0
+    effectchance 30
     target RANGE_SINGLE_TARGET
     priority 0
     flags FLAG_MIRROR_MOVE | FLAG_PROTECT | FLAG_CONTACT
@@ -1738,7 +1738,7 @@ movedata MOVE_MINIMIZE, "Minimize"
     movedescription MOVE_MINIMIZE, "The user compresses\nits body to make\nitself look smaller.\nThe user’s evasion\nstat is boosted."
 
 movedata MOVE_SMOKESCREEN, "Smokescreen"
-    battleeffect MOVE_EFFECT_ACC_DOWN
+    battleeffect MOVE_EFFECT_EVA_DOWN
     pss SPLIT_STATUS
     basepower 0
     type TYPE_NORMAL
@@ -1931,8 +1931,8 @@ movedata MOVE_MIRROR_MOVE, "Mirror Move"
 
 movedata MOVE_SELF_DESTRUCT, "Self-Destruct"
     battleeffect MOVE_EFFECT_HALVE_DEFENSE
-    pss SPLIT_PHYSICAL
-    basepower 200
+    pss SPLIT_SPECIAL
+    basepower 250
     type TYPE_NORMAL
     accuracy 100
     pp 5
@@ -2378,7 +2378,7 @@ movedata MOVE_SPORE, "Spore"
     movedescription MOVE_SPORE, "The user scatters\nbursts of spores\nthat induce sleep.\n\n"
 
 movedata MOVE_FLASH, "Flash"
-    battleeffect MOVE_EFFECT_ACC_DOWN
+    battleeffect MOVE_EFFECT_SPEED_DOWN
     pss SPLIT_STATUS
     basepower 0
     type TYPE_NORMAL
@@ -2391,7 +2391,7 @@ movedata MOVE_FLASH, "Flash"
     appeal APPEAL_LOWER_VOLTAGES
     contesttype CONTEST_BEAUTY
     terminatedata
-    movedescription MOVE_FLASH, "The user flashes a\nlight that cuts the\nfoe’s accuracy.\nIt can also be used\nto illuminate caves."
+    movedescription MOVE_FLASH, "The user flashes a\nlight that cuts the\nfoe’s speed.\nIt can also be used\nto illuminate caves."
 
 movedata MOVE_PSYWAVE, "Psywave"
     battleeffect MOVE_EFFECT_RANDOM_DAMAGE_1_TO_150_LEVEL
@@ -3034,20 +3034,20 @@ movedata MOVE_SLUDGE_BOMB, "Sludge Bomb"
     movedescription MOVE_SLUDGE_BOMB, "The user attacks by\nhurling filthy sludge\nat the foe.\nIt may also poison\nthe target."
 
 movedata MOVE_MUD_SLAP, "Mud-Slap"
-    battleeffect MOVE_EFFECT_LOWER_ACCURACY_HIT
+    battleeffect MOVE_EFFECT_HIT
     pss SPLIT_SPECIAL
-    basepower 20
+    basepower 40
     type TYPE_GROUND
     accuracy 100
     pp 10
-    effectchance 100
+    effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
     flags FLAG_MIRROR_MOVE | FLAG_PROTECT
     appeal APPEAL_BASIC
     contesttype CONTEST_CUTE
     terminatedata
-    movedescription MOVE_MUD_SLAP, "The user hurls mud in\nthe foe’s face to\ninflict damage and\nlower its accuracy.\n"
+    movedescription MOVE_MUD_SLAP, "The user hurls mud in\nthe foe’s face to\ninflict damage.\n"
 
 movedata MOVE_OCTAZOOKA, "Octazooka"
     battleeffect MOVE_EFFECT_LOWER_SPEED_HIT
@@ -5210,12 +5210,12 @@ movedata MOVE_SIGNAL_BEAM, "Signal Beam"
     movedescription MOVE_SIGNAL_BEAM, "The user attacks with\na sinister beam of\nlight. It may also\nconfuse the target.\n"
 
 movedata MOVE_SHADOW_PUNCH, "Shadow Punch"
-    battleeffect MOVE_EFFECT_BYPASS_ACCURACY
+    battleeffect MOVE_EFFECT_HIT
     pss SPLIT_PHYSICAL
-    basepower 60
+    basepower 90
     type TYPE_GHOST
-    accuracy 0
-    pp 20
+    accuracy 100
+    pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
@@ -6874,7 +6874,7 @@ movedata MOVE_ZEN_HEADBUTT, "Zen Headbutt"
     movedescription MOVE_ZEN_HEADBUTT, "The user focuses its\nwillpower to its head\nand rams the foe.\nIt may also make the\ntarget flinch."
 
 movedata MOVE_MIRROR_SHOT, "Mirror Shot"
-    battleeffect MOVE_EFFECT_LOWER_ACCURACY_HIT
+    battleeffect MOVE_EFFECT_LOWER_SP_DEF_HIT
     pss SPLIT_SPECIAL
     basepower 65
     type TYPE_STEEL
@@ -6887,7 +6887,7 @@ movedata MOVE_MIRROR_SHOT, "Mirror Shot"
     appeal APPEAL_FIRST_HEARTS
     contesttype CONTEST_CUTE
     terminatedata
-    movedescription MOVE_MIRROR_SHOT, "The user looses a\nflash of energy from\nits polished body.\nIt may also lower the\ntarget’s accuracy."
+    movedescription MOVE_MIRROR_SHOT, "The user looses a\nflash of energy from\nits polished body.\nIt may also lower the\ntarget’s Sp. Def stat."
 
 movedata MOVE_FLASH_CANNON, "Flash Cannon"
     battleeffect MOVE_EFFECT_LOWER_SP_DEF_HIT
@@ -8635,7 +8635,7 @@ movedata MOVE_HEAT_CRASH, "Heat Crash"
     movedescription MOVE_HEAT_CRASH, "The user slams down\nwith fire. The more\nthe user outweighs\nthe foe, the greater\nthe damage."
 
 movedata MOVE_LEAF_TORNADO, "Leaf Tornado"
-    battleeffect MOVE_EFFECT_LOWER_ACCURACY_HIT
+    battleeffect MOVE_EFFECT_LOWER_SP_DEF_HIT
     pss SPLIT_SPECIAL
     basepower 65
     type TYPE_GRASS
@@ -8648,7 +8648,7 @@ movedata MOVE_LEAF_TORNADO, "Leaf Tornado"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_LEAF_TORNADO, "Sharp leaves circle\nthe foe. It may also\nlower the foe’s\naccuracy."
+    movedescription MOVE_LEAF_TORNADO, "Sharp leaves circle\nthe foe. It may also\nlower the foe’s\nSp. Def stat."
 
 movedata MOVE_STEAMROLLER, "Steamroller"
     battleeffect MOVE_EFFECT_FLINCH_MINIMIZE_DOUBLE_HIT
@@ -8683,21 +8683,21 @@ movedata MOVE_COTTON_GUARD, "Cotton Guard"
     movedescription MOVE_COTTON_GUARD, "The user protects\nitself with cotton,\ndrastically raising\nits Defense."
 
 movedata MOVE_NIGHT_DAZE, "Night Daze"
-    battleeffect MOVE_EFFECT_LOWER_ACCURACY_HIT
+    battleeffect MOVE_EFFECT_SWITCH_HIT
     pss SPLIT_SPECIAL
-    basepower 85
+    basepower 70
     type TYPE_DARK
-    accuracy 95
-    pp 10
-    effectchance 40
+    accuracy 100
+    pp 20
+    effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_NIGHT_DAZE, "The user releases a\npitch-black blast\nat its target. May\nalso lower target’s\naccuracy."
-
+    movedescription MOVE_NIGHT_DAZE, "The user releases a\npitch-black blast\nbefore switching\nwith a party\nPokémon."
+                                                                              
 movedata MOVE_PSYSTRIKE, "Psystrike"
     battleeffect MOVE_EFFECT_HIT
     pss SPLIT_SPECIAL
@@ -9218,7 +9218,7 @@ movedata MOVE_PETAL_BLIZZARD, "Petal Blizzard"
     accuracy 100
     pp 15
     effectchance 0
-    target RANGE_ALL_ADJACENT
+    target RANGE_ADJACENT_OPPONENTS
     priority 0
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE
     appeal 0x00

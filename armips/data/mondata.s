@@ -10032,7 +10032,7 @@ mondata SPECIES_PROBOPASS, "Probopass"
 
 
 mondata SPECIES_DUSKNOIR, "Dusknoir"
-    basestats 45, 100, 135, 45, 65, 135
+    basestats 55, 120, 135, 45, 45, 135
     types TYPE_GHOST, TYPE_GHOST
     catchrate 45
     baseexp 0 // defined in baseexp.s
@@ -10043,7 +10043,7 @@ mondata SPECIES_DUSKNOIR, "Dusknoir"
     basefriendship 35
     growthrate GROWTH_FAST
     egggroups EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS
-    abilities ABILITY_PRESSURE, ABILITY_NONE
+    abilities ABILITY_LEVITATE, ABILITY_IRON_FIST
     runchance 0
     colorflip BODY_COLOR_BLACK, 0
     mondexentry SPECIES_DUSKNOIR, "This feared Pokémon is said to travel to\nworlds unknown. Some even believe that\nit takes lost spirits along with it."
@@ -15576,7 +15576,7 @@ mondata SPECIES_SKRELP, "Skrelp"
 
 
 mondata SPECIES_DRAGALGE, "Dragalge"
-    basestats 65, 75, 90, 44, 97, 123
+    basestats 80, 55, 90, 80, 130, 100
     types TYPE_POISON, TYPE_DRAGON
     catchrate 55
     baseexp 0 // defined in baseexp.s

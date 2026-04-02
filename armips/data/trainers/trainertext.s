@@ -3109,8 +3109,11 @@ _1AE4: // Trainer 741
 _1AE8: // Trainer 742
     trainertextentry 742, TEXT_DEFEATED_IN_BATTLE, "Wow, you sure are tough!\n"
 
+_1AF8: // Trainer 750
+    trainertextentry 750, TEXT_DEFEATED_IN_BATTLE, "Ugwaaah! That's it! You're not\ngetting away with this!\r"
+
 _1AEC: // Trainer 751
-    trainertextentry 751, TEXT_NOTICE_IN_OVERWORLD, "You heard of the Bug-Catching Contest?\nIt's the hottest sport in the bug\fcatching world!\r"
+    trainertextentry 751, TEXT_NOTICE_IN_OVERWORLD, "You heard of the Bug-Catching Contest?\nIt's the hottest event in the bug\fcatching world!\r"
     trainertextentry 751, TEXT_DEFEATED_IN_BATTLE, "I should really stick to catching\nPokémon...\r"
     trainertextentry 751, TEXT_DEFEATED_IN_OVERWORLD, "I should get back to catching practice,\nif you don't mind.\r"
     
@@ -3123,7 +3126,6 @@ _1AF4: // Trainer 753
     trainertextentry 753, TEXT_NOTICE_IN_OVERWORLD, "Tuesday, Thursday, Saturday! I can't\nwait until Contest Day!\r"
     trainertextentry 753, TEXT_DEFEATED_IN_BATTLE, "It's gonna be Contest Day before you\nknow it!\r"
     trainertextentry 753, TEXT_DEFEATED_IN_OVERWORLD, "The Bug-Catching Contest is hosted\nevery Tuesday at the National Park.\fIt's a must go for Bug enthusiasts\flike myself!\r"
-
 .close
 
 
@@ -3880,7 +3882,7 @@ _1AF4: // Trainer 753
 /* Trainer 747 */ .halfword _0000
 /* Trainer 748 */ .halfword _0000
 /* Trainer 749 */ .halfword _0000
-/* Trainer 750 */ .halfword _0000
+/* Trainer 750 */ .halfword _1AF8
 /* Trainer 751 */ .halfword _1AEC
 /* Trainer 752 */ .halfword _1AF0
 /* Trainer 753 */ .halfword _1AF4

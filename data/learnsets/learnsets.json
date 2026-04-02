@@ -12948,7 +12948,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 28,
@@ -13128,7 +13128,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 30,
@@ -13314,7 +13314,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 30,
@@ -15416,7 +15416,7 @@
       },
       {
         "Level": 21,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_POISON_JAB"
       },
       {
         "Level": 26,
@@ -15593,7 +15593,7 @@
       },
       {
         "Level": 21,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_POISON_JAB"
       },
       {
         "Level": 26,
@@ -17699,7 +17699,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_THUNDER"
       },
       {
         "Level": 46,
@@ -17856,7 +17856,7 @@
       },
       {
         "Level": 47,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_THUNDER"
       },
       {
         "Level": 54,
@@ -21339,7 +21339,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_CONFUSION"
       },
       {
         "Level": 20,
@@ -21483,7 +21483,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_CONFUSION"
       },
       {
         "Level": 1,
@@ -28061,7 +28061,7 @@
       },
       {
         "Level": 19,
-        "Move": "MOVE_QUICK_ATTACK"
+        "Move": "MOVE_SMOKESCREEN"
       },
       {
         "Level": 22,
@@ -28080,7 +28080,11 @@
         "Move": "MOVE_FLAMETHROWER"
       },
       {
-        "Level": 42,
+        "Level": 40,
+        "Move": "MOVE_SMOKESCREEN"
+      },
+      {
+        "Level": 43,
         "Move": "MOVE_INFERNO"
       },
       {
@@ -36579,7 +36583,7 @@
       },
       {
         "Level": 6,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STEALTH_ROCK"
       },
       {
         "Level": 9,
@@ -36756,7 +36760,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STEALTH_ROCK"
       },
       {
         "Level": 1,
@@ -37954,7 +37958,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_BARB_BARRAGE"
       },
       {
         "Level": 20,
@@ -38085,7 +38089,6 @@
       "MOVE_ACID_SPRAY",
       "MOVE_AQUA_JET",
       "MOVE_ASTONISH",
-      "MOVE_BARB_BARRAGE",
       "MOVE_BUBBLE_BEAM",
       "MOVE_FLAIL",
       "MOVE_HAZE",
@@ -74052,7 +74055,7 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_WILL_O_WISP"
       },
       {
         "Level": 1,
@@ -74108,7 +74111,7 @@
       },
       {
         "Level": 44,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_AGILITY"
       }
     ],
     "MachineMoves": [
@@ -74253,7 +74256,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_WILL_O_WISP"
       },
       {
         "Level": 12,
@@ -74297,7 +74300,7 @@
       },
       {
         "Level": 54,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_AGILITY"
       }
     ],
     "MachineMoves": [
@@ -102210,7 +102213,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STEALTH_ROCK"
       },
       {
         "Level": 35,
@@ -102338,7 +102341,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STEALTH_ROCK"
       },
       {
         "Level": 35,
@@ -103413,7 +103416,7 @@
       },
       {
         "Level": 8,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_DESTINY_BOND"
       },
       {
         "Level": 12,
@@ -103555,7 +103558,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_DESTINY_BOND"
       },
       {
         "Level": 1,
@@ -103714,7 +103717,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_DESTINY_BOND"
       },
       {
         "Level": 1,
@@ -135527,7 +135530,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 28,
@@ -135687,7 +135690,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 30,
@@ -135856,7 +135859,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_SELF_DESTRUCT"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 30,
@@ -136027,7 +136030,7 @@
       },
       {
         "Level": 21,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_SUCKER_PUNCH"
       },
       {
         "Level": 26,
@@ -136196,7 +136199,7 @@
       },
       {
         "Level": 21,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_SUCKER_PUNCH"
       },
       {
         "Level": 26,
@@ -141359,7 +141362,7 @@
       },
       {
         "Level": 5,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_LEER"
       },
       {
         "Level": 10,
@@ -141458,7 +141461,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_LEER"
       },
       {
         "Level": 1,
@@ -152088,7 +152091,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_AQUA_JET"
       },
       {
         "Level": 20,
@@ -152764,7 +152767,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_THUNDER"
       },
       {
         "Level": 46,
@@ -152893,7 +152896,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_EXPLOSION"
+        "Move": "MOVE_THUNDER"
       },
       {
         "Level": 46,
@@ -153207,7 +153210,7 @@
       },
       {
         "Level": 16,
-        "Move": "MOVE_MINIMIZE"
+        "Move": "MOVE_AQUA_JET"
       },
       {
         "Level": 20,
