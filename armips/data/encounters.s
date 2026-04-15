@@ -127,13 +127,13 @@ walklevels 2, 3, 2, 3, 3, 3, 2, 2, 4, 4, 4, 4
     pokemon SPECIES_WURMPLE          // 20
     pokemon SPECIES_SENTRET          // 10
     pokemon SPECIES_HOPPIP           // 10
-    pokemon SPECIES_ZIGZAGOON        // 10
+    pokemon SPECIES_BUNNELBY         // 10
     pokemon SPECIES_ODDISH           // 10
     pokemon SPECIES_HOPPIP           // 5 
     pokemon SPECIES_NINCADA          // 5
-    pokemon SPECIES_ZIGZAGOON        // 4
+    pokemon SPECIES_BUNNELBY         // 4
     pokemon SPECIES_SENTRET          // 4
-    monwithform SPECIES_ZIGZAGOON, 1 // 1
+    pokemon SPECIES_BUNNELBY         // 1
     pokemon SPECIES_SENTRET          // 1
 
 // day encounter slots
@@ -141,13 +141,13 @@ walklevels 2, 3, 2, 3, 3, 3, 2, 2, 4, 4, 4, 4
     pokemon SPECIES_WURMPLE          // 20
     pokemon SPECIES_SENTRET          // 10
     pokemon SPECIES_HOPPIP           // 10
-    pokemon SPECIES_ZIGZAGOON        // 10
+    pokemon SPECIES_BUNNELBY         // 10
     pokemon SPECIES_ODDISH           // 10
     pokemon SPECIES_HOPPIP           // 5 
     pokemon SPECIES_NINCADA          // 5
-    pokemon SPECIES_ZIGZAGOON        // 4
+    pokemon SPECIES_BUNNELBY         // 4
     pokemon SPECIES_SENTRET          // 4
-    monwithform SPECIES_ZIGZAGOON, 1 // 1
+    pokemon SPECIES_BUNNELBY         // 1
     pokemon SPECIES_SENTRET          // 1
 
 // night encounter slots
@@ -161,7 +161,7 @@ walklevels 2, 3, 2, 3, 3, 3, 2, 2, 4, 4, 4, 4
     pokemon SPECIES_NINCADA          // 5
     pokemon SPECIES_RATTATA          // 4
     pokemon SPECIES_HOOTHOOT         // 4
-    monwithform SPECIES_RATTATA, 1   // 1
+    pokemon SPECIES_BUNNELBY         // 1
     pokemon SPECIES_HOOTHOOT         // 1
 
 // hoenn encounter slots
@@ -334,7 +334,7 @@ walklevels 2, 3, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4
     pokemon SPECIES_STARLY              // 20
     pokemon SPECIES_ROCKRUFF            // 20
     pokemon SPECIES_MAREEP              // 10
-    pokemon SPECIES_LECHONK             // 10
+    pokemon SPECIES_SENTRET             // 10
     pokemon SPECIES_FLETCHLING          // 10
     pokemon SPECIES_MAREEP              // 10
     pokemon SPECIES_NINCADA             // 5
@@ -348,7 +348,7 @@ walklevels 2, 3, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4
     pokemon SPECIES_STARLY              // 20
     pokemon SPECIES_ROCKRUFF            // 20
     pokemon SPECIES_MAREEP              // 10
-    pokemon SPECIES_LECHONK             // 10
+    pokemon SPECIES_SENTRET             // 10
     pokemon SPECIES_FLETCHLING          // 10
     pokemon SPECIES_MAREEP              // 10
     pokemon SPECIES_NINCADA             // 5
@@ -362,7 +362,7 @@ walklevels 2, 3, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4
     pokemon SPECIES_MURKROW         // 20
     pokemon SPECIES_ROCKRUFF        // 20
     pokemon SPECIES_ELECTRIKE       // 10
-    pokemon SPECIES_LECHONK         // 10
+    pokemon SPECIES_POOCHYENA       // 10
     pokemon SPECIES_MINCCINO        // 10
     pokemon SPECIES_MAREEP          // 10
     pokemon SPECIES_NINCADA         // 5
@@ -2203,18 +2203,18 @@ superrodrate 75
 walklevels 10, 11, 10, 11, 12, 12, 10, 10, 13, 10, 13, 10
 
 // morning encounter slots
-    pokemon SPECIES_DROWZEE
-    pokemon SPECIES_RATTATA
-    pokemon SPECIES_DROWZEE
-    pokemon SPECIES_RATTATA
-    pokemon SPECIES_DROWZEE
-    pokemon SPECIES_DROWZEE
-    pokemon SPECIES_ABRA
-    pokemon SPECIES_ABRA
-    pokemon SPECIES_RATTATA
-    pokemon SPECIES_DITTO
-    pokemon SPECIES_RATTATA
-    pokemon SPECIES_DITTO
+    pokemon SPECIES_DROWZEE     // 20
+    pokemon SPECIES_RATTATA     // 20
+    pokemon SPECIES_DROWZEE     // 10
+    pokemon SPECIES_RATTATA     // 10
+    pokemon SPECIES_DROWZEE     // 10
+    pokemon SPECIES_DROWZEE     // 10
+    pokemon SPECIES_ABRA        // 5
+    pokemon SPECIES_ABRA        // 5
+    pokemon SPECIES_RATTATA     // 4
+    pokemon SPECIES_DITTO       // 4
+    pokemon SPECIES_RATTATA     // 1
+    pokemon SPECIES_DITTO       // 1
 
 // day encounter slots
     pokemon SPECIES_DROWZEE
@@ -7198,35 +7198,35 @@ walklevels 3, 2, 3, 2, 2, 2, 4, 4, 3, 4, 3, 4
     pokemon SPECIES_ZUBAT
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
-    pokemon SPECIES_DIGLETT
+    pokemon SPECIES_NOSEPASS
     pokemon SPECIES_GEODUDE
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
     pokemon SPECIES_DUNSPARCE
     pokemon SPECIES_ARON
-    pokemon SPECIES_DIGLETT
-    pokemon SPECIES_DIGLETT
-    pokemon SPECIES_CUBONE
+    pokemon SPECIES_NOSEPASS
+    pokemon SPECIES_NOSEPASS
+    pokemon SPECIES_SOLROCK
 
 // day encounter slots
     pokemon SPECIES_ZUBAT
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
-    pokemon SPECIES_DIGLETT
+    pokemon SPECIES_NOSEPASS
     pokemon SPECIES_GEODUDE
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
     pokemon SPECIES_DUNSPARCE
     pokemon SPECIES_ARON
-    pokemon SPECIES_DIGLETT
-    pokemon SPECIES_DIGLETT
-    pokemon SPECIES_CUBONE
+    pokemon SPECIES_NOSEPASS
+    pokemon SPECIES_NOSEPASS
+    pokemon SPECIES_SOLROCK
 
 // night encounter slots
     pokemon SPECIES_ZUBAT
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
-    pokemon SPECIES_DIGLETT
+    pokemon SPECIES_NOSEPASS
     pokemon SPECIES_GEODUDE
     pokemon SPECIES_ROGGENROLA
     pokemon SPECIES_ARON
@@ -7234,7 +7234,7 @@ walklevels 3, 2, 3, 2, 2, 2, 4, 4, 3, 4, 3, 4
     pokemon SPECIES_ARON
     pokemon SPECIES_DIGLETT
     pokemon SPECIES_DIGLETT
-    pokemon SPECIES_CUBONE
+    pokemon SPECIES_LUNATONE
 
 // hoenn encounter slots
     pokemon SPECIES_ABSOL

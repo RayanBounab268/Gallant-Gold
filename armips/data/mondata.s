@@ -1160,7 +1160,7 @@ mondata SPECIES_PSYDUCK, "Psyduck"
     basefriendship 50
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_WATER_1, EGG_GROUP_FIELD
-    abilities ABILITY_DAMP, ABILITY_NONE
+    abilities ABILITY_DAMP, ABILITY_SWIFT_SWIM
     runchance 0
     colorflip BODY_COLOR_YELLOW, 0
     mondexentry SPECIES_PSYDUCK, "It has mystical powers but doesn’t\nrecall that it has used them.\nThat is why it always looks puzzled."
@@ -1170,8 +1170,8 @@ mondata SPECIES_PSYDUCK, "Psyduck"
 
 
 mondata SPECIES_GOLDUCK, "Golduck"
-    basestats 80, 82, 78, 85, 95, 80
-    types TYPE_WATER, TYPE_WATER
+    basestats 80, 82, 78, 85, 105, 80
+    types TYPE_WATER, TYPE_PSYCHIC
     catchrate 75
     baseexp 0 // defined in baseexp.s
     evyields 0, 0, 0, 0, 2, 0
@@ -1181,7 +1181,7 @@ mondata SPECIES_GOLDUCK, "Golduck"
     basefriendship 50
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_WATER_1, EGG_GROUP_FIELD
-    abilities ABILITY_DAMP, ABILITY_NONE
+    abilities ABILITY_DRIZZLE, ABILITY_SWIFT_SWIM
     runchance 0
     colorflip BODY_COLOR_BLUE, 0
     mondexentry SPECIES_GOLDUCK, "When it swims at full speed using\nits long, webbed limbs, its forehead\nsomehow begins to glow."
@@ -3407,7 +3407,7 @@ mondata SPECIES_SENTRET, "Sentret"
     basefriendship 70
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
-    abilities ABILITY_RUN_AWAY, ABILITY_NONE
+    abilities ABILITY_TECHNICIAN, ABILITY_NONE
     runchance 0
     colorflip BODY_COLOR_BROWN, 0
     mondexentry SPECIES_SENTRET, "A very cautious Pokémon, it raises\nitself up using its tail to get a\nbetter view of its surroundings."
@@ -3417,7 +3417,7 @@ mondata SPECIES_SENTRET, "Sentret"
 
 
 mondata SPECIES_FURRET, "Furret"
-    basestats 85, 76, 64, 90, 45, 55
+    basestats 85, 96, 64, 90, 45, 55
     types TYPE_NORMAL, TYPE_NORMAL
     catchrate 90
     baseexp 0 // defined in baseexp.s
@@ -3428,7 +3428,7 @@ mondata SPECIES_FURRET, "Furret"
     basefriendship 70
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
-    abilities ABILITY_RUN_AWAY, ABILITY_NONE
+    abilities ABILITY_TECHNICIAN, ABILITY_NONE
     runchance 0
     colorflip BODY_COLOR_BROWN, 0
     mondexentry SPECIES_FURRET, "It makes a nest to suit its long and\nskinny body. The nest is impossible\nfor other Pokémon to enter."
@@ -3439,7 +3439,7 @@ mondata SPECIES_FURRET, "Furret"
 
 mondata SPECIES_HOOTHOOT, "Hoothoot"
     basestats 60, 30, 30, 50, 36, 56
-    types TYPE_NORMAL, TYPE_FLYING
+    types TYPE_PSYCHIC, TYPE_FLYING
     catchrate 255
     baseexp 0 // defined in baseexp.s
     evyields 1, 0, 0, 0, 0, 0
@@ -3460,7 +3460,7 @@ mondata SPECIES_HOOTHOOT, "Hoothoot"
 
 mondata SPECIES_NOCTOWL, "Noctowl"
     basestats 100, 50, 50, 70, 86, 96
-    types TYPE_NORMAL, TYPE_FLYING
+    types TYPE_PSYCHIC, TYPE_FLYING
     catchrate 90
     baseexp 0 // defined in baseexp.s
     evyields 2, 0, 0, 0, 0, 0
@@ -3480,7 +3480,7 @@ mondata SPECIES_NOCTOWL, "Noctowl"
 
 
 mondata SPECIES_LEDYBA, "Ledyba"
-    basestats 40, 20, 30, 55, 40, 80
+    basestats 40, 50, 30, 55, 40, 80
     types TYPE_BUG, TYPE_FLYING
     catchrate 255
     baseexp 0 // defined in baseexp.s
@@ -3501,7 +3501,7 @@ mondata SPECIES_LEDYBA, "Ledyba"
 
 
 mondata SPECIES_LEDIAN, "Ledian"
-    basestats 55, 35, 50, 85, 55, 110
+    basestats 55, 85, 50, 85, 55, 110
     types TYPE_BUG, TYPE_FLYING
     catchrate 90
     baseexp 0 // defined in baseexp.s
@@ -5507,7 +5507,7 @@ mondata SPECIES_POOCHYENA, "Poochyena"
     basefriendship 70
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
-    abilities ABILITY_RUN_AWAY, ABILITY_NONE
+    abilities ABILITY_INTIMIDATE, ABILITY_STRONG_JAW
     runchance 0
     colorflip BODY_COLOR_GRAY, 0
     mondexentry SPECIES_POOCHYENA, "It chases its prey until the victim\nbecomes exhausted. However, it\nturns tail if the prey strikes back."
@@ -5528,7 +5528,7 @@ mondata SPECIES_MIGHTYENA, "Mightyena"
     basefriendship 70
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
-    abilities ABILITY_INTIMIDATE, ABILITY_NONE
+    abilities ABILITY_INTIMIDATE, ABILITY_STRONG_JAW
     runchance 0
     colorflip BODY_COLOR_GRAY, 0
     mondexentry SPECIES_MIGHTYENA, "It chases down prey in a pack of\naround ten. They defeat foes with\nperfectly coordinated teamwork."

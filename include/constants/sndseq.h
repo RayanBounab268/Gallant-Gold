@@ -366,6 +366,8 @@
 #define SEQ_AIF_DUNGEON                      1359
 #define SEQ_AIF_BATTLE                       1360
 #define SEQ_BGM_END                          1361
+#define SEQ_GS_VS_FRIEND                     1362
+#define SEQ_GS_VS_ROCKET_EXEC                1363
 #define SEQ_SE_PL_W012                       1372
 #define SEQ_SE_PL_W097                       1373
 #define SEQ_SE_PL_W460B                      1374

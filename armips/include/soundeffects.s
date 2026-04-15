@@ -363,6 +363,8 @@ SEQ_AIF_FIELD                      equ 1358
 SEQ_AIF_DUNGEON                    equ 1359
 SEQ_AIF_BATTLE                     equ 1360
 SEQ_BGM_END                        equ 1361
+SEQ_GS_VS_FRIEND                   equ 1362
+SEQ_GS_VS_ROCKET_EXEC              equ 1363
 SEQ_SE_PL_W012                     equ 1372
 SEQ_SE_PL_W097                     equ 1373
 SEQ_SE_PL_W460B                    equ 1374

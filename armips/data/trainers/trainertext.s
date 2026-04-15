@@ -3110,22 +3110,22 @@ _1AE8: // Trainer 742
     trainertextentry 742, TEXT_DEFEATED_IN_BATTLE, "Wow, you sure are tough!\n"
 
 _1AF8: // Trainer 750
-    trainertextentry 750, TEXT_DEFEATED_IN_BATTLE, "Ugwaaah! That's it! You're not\ngetting away with this!\r"
+    trainertextentry 750, TEXT_DOUBLE_DEFEATED_IN_BATTLE_1, "Ugwaaah! That's it! You're not\ngetting away with this!\r"
 
 _1AEC: // Trainer 751
     trainertextentry 751, TEXT_NOTICE_IN_OVERWORLD, "You heard of the Bug-Catching Contest?\nIt's the hottest event in the bug\fcatching world!\r"
     trainertextentry 751, TEXT_DEFEATED_IN_BATTLE, "I should really stick to catching\nPokémon...\r"
-    trainertextentry 751, TEXT_DEFEATED_IN_OVERWORLD, "I should get back to catching practice,\nif you don't mind.\r"
+    trainertextentry 751, TEXT_DEFEATED_IN_OVERWORLD, "I should get back to catching practice,\nif you don't mind."
     
 _1AF0: // Trainer 752
     trainertextentry 752, TEXT_NOTICE_IN_OVERWORLD, "You seen any good Bug-type Pokémon\naround here? I'm trying to learn what's\fgonna be at this week's Bug-Catching\fContest!\r"
     trainertextentry 752, TEXT_DEFEATED_IN_BATTLE, "Of course you wouldn’t have the scoop\non cool Bug-type Pokémon.\r"
-    trainertextentry 752, TEXT_DEFEATED_IN_OVERWORLD, "I've heard that the National Park\nsources their Bug-type Pokémon from\fthis forest!\r"
+    trainertextentry 752, TEXT_DEFEATED_IN_OVERWORLD, "I've heard that the National Park\nsources their Bug-type Pokémon from\fthis forest!"
 
 _1AF4: // Trainer 753
     trainertextentry 753, TEXT_NOTICE_IN_OVERWORLD, "Tuesday, Thursday, Saturday! I can't\nwait until Contest Day!\r"
     trainertextentry 753, TEXT_DEFEATED_IN_BATTLE, "It's gonna be Contest Day before you\nknow it!\r"
-    trainertextentry 753, TEXT_DEFEATED_IN_OVERWORLD, "The Bug-Catching Contest is hosted\nevery Tuesday at the National Park.\fIt's a must go for Bug enthusiasts\flike myself!\r"
+    trainertextentry 753, TEXT_DEFEATED_IN_OVERWORLD, "The Bug-Catching Contest is hosted\nevery Tuesday at the National Park.\fIt's a must go for Bug enthusiasts\flike myself!"
 .close
 
 

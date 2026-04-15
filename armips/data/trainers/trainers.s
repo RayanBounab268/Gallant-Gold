@@ -742,9 +742,9 @@ trainerdata 21, "Bugsy"
         level 21
         pokemon SPECIES_ANORITH
         item ITEM_NONE
+        move MOVE_X_SCISSOR
         move MOVE_ROCK_SLIDE
         move MOVE_AQUA_JET
-        move MOVE_X_SCISSOR
         move MOVE_STEALTH_ROCK
         ball ITEM_NET_BALL
         ballseal 0
@@ -26482,58 +26482,74 @@ trainerdata 739, "Lyra"
     endparty
 
 trainerdata 740, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
     battletype SINGLE_BATTLE
     endentry
 
     party 740
         // mon 0
-        ivs 30
+        ivs 60
         abilityslot 32
         level 19
-        pokemon SPECIES_HOUNDOUR
+        pokemon SPECIES_MAGNEMITE
+        move MOVE_SHOCK_WAVE
+        move MOVE_MIRROR_SHOT
+        move MOVE_THUNDER_WAVE
+        move MOVE_CONFUSE_RAY
         ballseal 0
 
         // mon 1
-        ivs 30
+        ivs 60
         abilityslot 32
         level 19
         pokemon SPECIES_EKANS
+        move MOVE_POISON_FANG
+        move MOVE_BITE
+        move MOVE_TOXIC
+        move MOVE_GLARE
         ballseal 0
     endparty
 
 trainerdata 741, "Grunt"
-    trainermontype TRAINER_DATA_TYPE_NOTHING
+    trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_TEAM_ROCKET
     nummons 2
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS
     battletype SINGLE_BATTLE
     endentry
 
     party 741
         // mon 0
-        ivs 30
+        ivs 60
         abilityslot 32
         level 19
-        pokemon SPECIES_MANKEY
+        pokemon SPECIES_EXEGGCUTE
+        move MOVE_MEGA_DRAIN
+        move MOVE_CONFUSION
+        move MOVE_HYPNOSIS
+        move MOVE_STUN_SPORE
         ballseal 0
 
         // mon 1
-        ivs 30
+        ivs 60
         abilityslot 32
         level 19
-        monwithform SPECIES_RATTATA, 1
+        monwithform SPECIES_GRIMER, 1
+        move MOVE_POISON_FANG
+        move MOVE_SHADOW_PUNCH
+        move MOVE_TOXIC
+        move MOVE_CONFUSE_RAY
         ballseal 0
     endparty
 
@@ -26551,24 +26567,24 @@ trainerdata 742, "Lyra"
 
     party 742
         // mon 0
-        ivs 0
+        ivs 80
         abilityslot 0
-        level 9
-        pokemon SPECIES_ESPURR
+        level 11
+        pokemon SPECIES_VULPIX
         ballseal 0
 
         // mon 1
-        ivs 0
+        ivs 80
         abilityslot 0
-        level 10
+        level 11
         pokemon SPECIES_MARILL
         ballseal 0
 
         // mon 2
-        ivs 0
+        ivs 80
         abilityslot 0
-        level 9
-        pokemon SPECIES_VULPIX
+        level 12
+        pokemon SPECIES_ESPURR
         ballseal 0
     endparty
 
@@ -27208,10 +27224,10 @@ trainerdata 750, "Gorigan"
         level 29
         pokemon SPECIES_GRAFAIAI
         item ITEM_NONE
-        move MOVE_ENCORE
-        move MOVE_POISON_JAB
+        move MOVE_SWAGGER
+        move MOVE_CROSS_POISON
         move MOVE_SLASH
-        move MOVE_PARTING_SHOT
+        move MOVE_U_TURN
         ballseal 0
     
         ivs 100
@@ -27228,12 +27244,12 @@ trainerdata 750, "Gorigan"
         ivs 100
         abilityslot 0
         level 30
-        pokemon SPECIES_SIMISEAR
-        item ITEM_PETAYA_BERRY
-        move MOVE_FLAME_BURST
-        move MOVE_ROCK_SLIDE
-        move MOVE_WILL_O_WISP
+        pokemon SPECIES_SIMISAGE
+        item ITEM_SITRUS_BERRY
+        move MOVE_SEED_BOMB
         move MOVE_BRICK_BREAK
+        move MOVE_ROCK_SLIDE
+        move MOVE_CUT
         ballseal 0
     endparty
 
