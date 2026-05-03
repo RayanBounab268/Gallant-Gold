@@ -50,7 +50,7 @@ void PCStorage_InitializeBoxes(PCStorage *storage) {
         }
     }
 
-    storage->unlockedWallpapers = 0;
+    storage->unlockedWallpapers = 255;
 
     msgData = NewMsgDataFromNarc(MSGDATA_LOAD_LAZY, 27, 24, 0);
     if (msgData != NULL) {

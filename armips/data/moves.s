@@ -652,7 +652,7 @@ movedata MOVE_TAIL_WHIP, "Tail Whip"
 movedata MOVE_POISON_STING, "Poison Sting"
     battleeffect MOVE_EFFECT_POISON_HIT
     pss SPLIT_PHYSICAL
-    basepower 15
+    basepower 40
     type TYPE_POISON
     accuracy 100
     pp 35
@@ -4892,7 +4892,7 @@ movedata MOVE_HYPER_VOICE, "Hyper Voice"
 movedata MOVE_POISON_FANG, "Poison Fang"
     battleeffect MOVE_EFFECT_BADLY_POISON_HIT
     pss SPLIT_PHYSICAL
-    basepower 50
+    basepower 65
     type TYPE_POISON
     accuracy 100
     pp 15

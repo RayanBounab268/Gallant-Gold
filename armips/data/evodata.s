@@ -3192,8 +3192,8 @@ evodata SPECIES_LINOONE
 terminateevodata
 
 evodata SPECIES_WURMPLE
-    evolution EVO_LEVEL_PID_LO, 7, SPECIES_SILCOON
-    evolution EVO_LEVEL_PID_HI, 7, SPECIES_CASCOON
+    evolution EVO_LEVEL_FEMALE, 7, SPECIES_SILCOON
+    evolution EVO_LEVEL_MALE, 7, SPECIES_CASCOON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11640,7 +11640,7 @@ evodata SPECIES_SPIDOPS
 terminateevodata
 
 evodata SPECIES_NYMBLE
-    evolution EVO_LEVEL, 24, SPECIES_LOKIX
+    evolution EVO_LEVEL, 23, SPECIES_LOKIX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE

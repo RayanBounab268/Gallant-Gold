@@ -29175,7 +29175,7 @@
       },
       {
         "Level": 25,
-        "Move": "MOVE_SLAM"
+        "Move": "MOVE_AERIAL_ACE"
       },
       {
         "Level": 28,
@@ -29187,7 +29187,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_AMNESIA"
+        "Move": "MOVE_BODY_SLAM"
       },
       {
         "Level": 39,
@@ -29199,7 +29199,11 @@
       },
       {
         "Level": 47,
-        "Move": "MOVE_HYPER_VOICE"
+        "Move": "MOVE_FACADE"
+      },
+      {
+        "Level": 52,
+        "Move": "MOVE_EXTREME_SPEED"
       }
     ],
     "MachineMoves": [
@@ -29363,7 +29367,7 @@
       },
       {
         "Level": 28,
-        "Move": "MOVE_SLAM"
+        "Move": "MOVE_AERIAL_ACE"
       },
       {
         "Level": 32,
@@ -29375,7 +29379,7 @@
       },
       {
         "Level": 42,
-        "Move": "MOVE_AMNESIA"
+        "Move": "MOVE_BODY_SLAM"
       },
       {
         "Level": 46,
@@ -29387,7 +29391,11 @@
       },
       {
         "Level": 56,
-        "Move": "MOVE_HYPER_VOICE"
+        "Move": "MOVE_FACADE"
+      },
+      {
+        "Level": 62,
+        "Move": "MOVE_EXTREME_SPEED"
       }
     ],
     "MachineMoves": [
@@ -30208,7 +30216,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_NIGHT_SHADE"
+        "Move": "MOVE_PIN_MISSILE"
       },
       {
         "Level": 19,
@@ -30228,7 +30236,7 @@
       },
       {
         "Level": 33,
-        "Move": "MOVE_PIN_MISSILE"
+        "Move": "MOVE_LEECH_LIFE"
       },
       {
         "Level": 36,
@@ -30373,7 +30381,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_NIGHT_SHADE"
+        "Move": "MOVE_PIN_MISSILE"
       },
       {
         "Level": 19,
@@ -30393,7 +30401,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_PIN_MISSILE"
+        "Move": "MOVE_LEECH_LIFE"
       },
       {
         "Level": 38,
@@ -33705,7 +33713,7 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_SPLASH"
+        "Move": "MOVE_GUST"
       },
       {
         "Level": 1,
@@ -33737,7 +33745,7 @@
       },
       {
         "Level": 12,
-        "Move": "MOVE_BULLET_SEED"
+        "Move": "MOVE_MEGA_DRAIN"
       },
       {
         "Level": 15,
@@ -33749,15 +33757,15 @@
       },
       {
         "Level": 22,
-        "Move": "MOVE_MEGA_DRAIN"
+        "Move": "MOVE_AIR_CUTTER"
       },
       {
         "Level": 24,
-        "Move": "MOVE_ACROBATICS"
+        "Move": "MOVE_TAILWIND"
       },
       {
         "Level": 27,
-        "Move": "MOVE_COTTON_SPORE"
+        "Move": "MOVE_GIGA_DRAIN"
       },
       {
         "Level": 29,
@@ -33765,15 +33773,15 @@
       },
       {
         "Level": 32,
-        "Move": "MOVE_GIGA_DRAIN"
+        "Move": "MOVE_ENERGY_BALL"
       },
       {
         "Level": 35,
-        "Move": "MOVE_BOUNCE"
+        "Move": "MOVE_AIR_SLASH"
       },
       {
         "Level": 38,
-        "Move": "MOVE_MEMENTO"
+        "Move": "MOVE_STRENGTH_SAP"
       }
     ],
     "MachineMoves": [
@@ -33869,7 +33877,7 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_SPLASH"
+        "Move": "MOVE_GUST"
       },
       {
         "Level": 1,
@@ -33905,7 +33913,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BULLET_SEED"
+        "Move": "MOVE_MEGA_DRAIN"
       },
       {
         "Level": 20,
@@ -33913,15 +33921,15 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_MEGA_DRAIN"
+        "Move": "MOVE_AIR_CUTTER"
       },
       {
         "Level": 28,
-        "Move": "MOVE_ACROBATICS"
+        "Move": "MOVE_TAILWIND"
       },
       {
         "Level": 31,
-        "Move": "MOVE_COTTON_SPORE"
+        "Move": "MOVE_GIGA_DRAIN"
       },
       {
         "Level": 34,
@@ -33929,15 +33937,15 @@
       },
       {
         "Level": 37,
-        "Move": "MOVE_GIGA_DRAIN"
+        "Move": "MOVE_ENERGY_BALL"
       },
       {
         "Level": 41,
-        "Move": "MOVE_BOUNCE"
+        "Move": "MOVE_AIR_SLASH"
       },
       {
         "Level": 44,
-        "Move": "MOVE_MEMENTO"
+        "Move": "MOVE_STRENGTH_SAP"
       }
     ],
     "MachineMoves": [
@@ -34033,8 +34041,12 @@
   "SPECIES_JUMPLUFF": {
     "LevelMoves": [
       {
+        "Level": 0,
+        "Move": "MOVE_COTTON_SPORE"
+      },
+      {
         "Level": 1,
-        "Move": "MOVE_SPLASH"
+        "Move": "MOVE_GUST"
       },
       {
         "Level": 1,
@@ -34070,7 +34082,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_BULLET_SEED"
+        "Move": "MOVE_MEGA_DRAIN"
       },
       {
         "Level": 20,
@@ -34078,15 +34090,15 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_MEGA_DRAIN"
+        "Move": "MOVE_AIR_CUTTER"
       },
       {
         "Level": 30,
-        "Move": "MOVE_ACROBATICS"
+        "Move": "MOVE_TAILWIND"
       },
       {
         "Level": 35,
-        "Move": "MOVE_COTTON_SPORE"
+        "Move": "MOVE_GIGA_DRAIN"
       },
       {
         "Level": 39,
@@ -34094,15 +34106,15 @@
       },
       {
         "Level": 43,
-        "Move": "MOVE_GIGA_DRAIN"
+        "Move": "MOVE_ENERGY_BALL"
       },
       {
         "Level": 49,
-        "Move": "MOVE_BOUNCE"
+        "Move": "MOVE_AIR_SLASH"
       },
       {
         "Level": 55,
-        "Move": "MOVE_MEMENTO"
+        "Move": "MOVE_STRENGTH_SAP"
       }
     ],
     "MachineMoves": [
@@ -37563,7 +37575,7 @@
       },
       {
         "Level": 31,
-        "Move": "MOVE_LAST_RESORT"
+        "Move": "MOVE_SPIRIT_BREAK"
       },
       {
         "Level": 37,
@@ -37576,6 +37588,10 @@
       {
         "Level": 49,
         "Move": "MOVE_CRUNCH"
+      },
+      {
+        "Level": 53,
+        "Move": "MOVE_HYPER_FANG"
       }
     ],
     "MachineMoves": [
@@ -37770,7 +37786,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_LAST_RESORT"
+        "Move": "MOVE_SPIRIT_BREAK"
       },
       {
         "Level": 43,
@@ -37783,6 +37799,10 @@
       {
         "Level": 59,
         "Move": "MOVE_CRUNCH"
+      },
+      {
+        "Level": 64,
+        "Move": "MOVE_HYPER_FANG"
       }
     ],
     "MachineMoves": [
@@ -40001,7 +40021,7 @@
       },
       {
         "Level": 15,
-        "Move": "MOVE_ENDURE"
+        "Move": "MOVE_BUBBLE_BEAM"
       },
       {
         "Level": 20,
@@ -40009,7 +40029,7 @@
       },
       {
         "Level": 25,
-        "Move": "MOVE_BUBBLE_BEAM"
+        "Move": "MOVE_STEALTH_ROCK"
       },
       {
         "Level": 30,

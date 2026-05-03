@@ -9,9 +9,9 @@
 #define SEQ_SILENCE_DUNGEON                  1002
 #define SEQ_TEST_TITLE                       1003
 #define SEQ_GS_TITLE                         1004
-#define SEQ_GS_TITLE01                       1005
-#define SEQ_GS_OPENING_TITLE_G               1006
-#define SEQ_GS_OPENING_TITLE_S               1007
+#define SEQ_GS_CHAMPROAD_OUT                 1005
+#define SEQ_GS_MOUNT_S                       1006
+#define SEQ_GS_EYE_ELITE                     1007
 #define SEQ_GS_POKEMON_THEME                 1008
 #define SEQ_GS_STARTING                      1009
 #define SEQ_GS_STARTING2                     1010
@@ -52,8 +52,8 @@
 #define SEQ_GS_C_TOKIWA                      1045
 #define SEQ_GS_T_MASARA                      1046
 #define SEQ_GS_T_GUREN                       1047
-#define SEQ_GS_R_9_01                        1048
-#define SEQ_GS_R_16_01                       1049
+#define SEQ_GS_VS_CIPH_ADM_K                 1048
+#define SEQ_GS_VS_SHITENNO                   1049
 #define SEQ_GS_R_17_01                       1050
 #define SEQ_GS_R_9_03                        1051
 #define SEQ_GS_R_10_03                       1052
@@ -368,6 +368,10 @@
 #define SEQ_BGM_END                          1361
 #define SEQ_GS_VS_FRIEND                     1362
 #define SEQ_GS_VS_ROCKET_EXEC                1363
+#define SEQ_GS_D_ILEX                        1364
+#define SEQ_GS_GATE                          1365
+#define SEQ_GS_HANDSOME                      1366
+#define SEQ_GS_WINROCKET                     1367
 #define SEQ_SE_PL_W012                       1372
 #define SEQ_SE_PL_W097                       1373
 #define SEQ_SE_PL_W460B                      1374
