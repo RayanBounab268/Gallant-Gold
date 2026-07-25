@@ -131,9 +131,9 @@ walklevels 2, 3, 2, 3, 3, 3, 2, 2, 4, 4, 4, 4
     pokemon SPECIES_ODDISH           // 10
     pokemon SPECIES_HOPPIP           // 5 
     pokemon SPECIES_NINCADA          // 5
-    pokemon SPECIES_BUNNELBY         // 4
+    pokemon SPECIES_POOCHYENA        // 4
     pokemon SPECIES_SENTRET          // 4
-    pokemon SPECIES_BUNNELBY         // 1
+    pokemon SPECIES_POOCHYENA        // 1
     pokemon SPECIES_SENTRET          // 1
 
 // day encounter slots

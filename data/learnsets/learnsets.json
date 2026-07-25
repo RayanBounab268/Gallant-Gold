@@ -14759,7 +14759,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_UPROAR"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 30,
@@ -14775,7 +14775,7 @@
       },
       {
         "Level": 39,
-        "Move": "MOVE_ENDEAVOR"
+        "Move": "MOVE_EARTHQUAKE"
       },
       {
         "Level": 43,
@@ -14887,7 +14887,7 @@
       },
       {
         "Level": 12,
-        "Move": "MOVE_FURY_ATTACK"
+        "Move": "MOVE_BULLDOZE"
       },
       {
         "Level": 15,
@@ -14907,7 +14907,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_ACUPRESSURE"
+        "Move": "MOVE_STOMPING_TANTRUM"
       },
       {
         "Level": 34,
@@ -14919,7 +14919,7 @@
       },
       {
         "Level": 43,
-        "Move": "MOVE_ENDEAVOR"
+        "Move": "MOVE_EARTHQUAKE"
       },
       {
         "Level": 50,

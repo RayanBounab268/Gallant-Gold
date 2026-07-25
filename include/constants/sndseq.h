@@ -134,7 +134,7 @@
 #define SEQ_GS_VS_GYMREADER_KANTO            1127
 #define SEQ_GS_WIN1                          1128
 #define SEQ_GS_WIN2                          1129
-#define SEQ_GS_WIN2_NOT_FAN                  1130
+#define SEQ_GS_SCEN_PLASMA                   1130
 #define SEQ_GS_WIN3                          1131
 #define SEQ_GS_VS_HOUOU                      1132
 #define SEQ_GS_VS_LUGIA                      1133
@@ -372,6 +372,10 @@
 #define SEQ_GS_GATE                          1365
 #define SEQ_GS_HANDSOME                      1366
 #define SEQ_GS_WINROCKET                     1367
+#define SEQ_GS_VS_SHITENNO_K                 1368
+#define SEQ_GS_EYE_PLASMA                    1369
+#define SEQ_GS_VS_PLASMA                     1370
+#define SEQ_GS_VS_NEO_PLASMA                 1371
 #define SEQ_SE_PL_W012                       1372
 #define SEQ_SE_PL_W097                       1373
 #define SEQ_SE_PL_W460B                      1374

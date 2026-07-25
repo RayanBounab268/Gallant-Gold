@@ -6,9 +6,9 @@ SEQ_SILENCE_FIELD                  equ 1001
 SEQ_SILENCE_DUNGEON                equ 1002
 SEQ_TEST_TITLE                     equ 1003
 SEQ_GS_TITLE                       equ 1004
-SEQ_GS_TITLE01                     equ 1005
-SEQ_GS_OPENING_TITLE_G             equ 1006
-SEQ_GS_OPENING_TITLE_S             equ 1007
+SEQ_GS_CHAMPROAD_OUT               equ 1005
+SEQ_GS_MOUNT_S                     equ 1006
+SEQ_GS_EYE_ELITE                   equ 1007
 SEQ_GS_POKEMON_THEME               equ 1008
 SEQ_GS_STARTING                    equ 1009
 SEQ_GS_STARTING2                   equ 1010
@@ -131,7 +131,7 @@ SEQ_GS_VS_TRAINER_KANTO            equ 1126
 SEQ_GS_VS_GYMREADER_KANTO          equ 1127
 SEQ_GS_WIN1                        equ 1128
 SEQ_GS_WIN2                        equ 1129
-SEQ_GS_WIN2_NOT_FAN                equ 1130
+SEQ_GS_SCEN_PLASMA                 equ 1130
 SEQ_GS_WIN3                        equ 1131
 SEQ_GS_VS_HOUOU                    equ 1132
 SEQ_GS_VS_LUGIA                    equ 1133
@@ -365,6 +365,14 @@ SEQ_AIF_BATTLE                     equ 1360
 SEQ_BGM_END                        equ 1361
 SEQ_GS_VS_FRIEND                   equ 1362
 SEQ_GS_VS_ROCKET_EXEC              equ 1363
+SEQ_GS_D_ILEX                      equ 1364
+SEQ_GS_GATE                        equ 1365
+SEQ_GS_HANDSOME                    equ 1366
+SEQ_GS_WINROCKET                   equ 1367
+SEQ_GS_VS_SHITENNO_K               equ 1368
+SEQ_GS_EYE_PLASMA                  equ 1369
+SEQ_GS_VS_PLASMA                   equ 1370
+SEQ_GS_VS_NEO_PLASMA               equ 1371
 SEQ_SE_PL_W012                     equ 1372
 SEQ_SE_PL_W097                     equ 1373
 SEQ_SE_PL_W460B                    equ 1374

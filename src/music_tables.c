@@ -55,7 +55,7 @@ u16 MainMusicComboTable[][2] =
     // (***END OF VANILLA ENTRIES***)
     [ANIM_MUSIC_COMBO_ETHAN] = {0xFFFF, SEQ_GS_VS_FRIEND},
     [ANIM_MUSIC_COMBO_LYRA] = {0xFFFF, SEQ_GS_VS_FRIEND},
-    [ANIM_MUSIC_COMBO_GORIGAN] = {0xFFFF, SEQ_GS_VS_ROCKET},
+    [ANIM_MUSIC_COMBO_GORIGAN] = {0xFFFF, SEQ_GS_VS_NEO_PLASMA},
 };
 
 // format is one byte for trainer class, then one byte for combo (combo increments by 4 because each combo is four bytes long)
@@ -177,5 +177,5 @@ struct TrainerMusic sTrainerEncounterMusicParam[] = // cues which music sequence
     {.class = TRAINERCLASS_EXECUTIVE_PETREL, .music1 = SEQ_GS_EYE_ROCKET, .music2 = SEQ_GS_EYE_ROCKET},
     {.class = TRAINERCLASS_NPC_TRAINER_ETHAN, .music1 = SEQ_GS_EYE_J_SHOUNEN, .music2 = SEQ_GS_EYE_J_SHOUNEN},
     {.class = TRAINERCLASS_NPC_TRAINER_LYRA, .music1 = SEQ_GS_EYE_K_SHOUJO, .music2 = SEQ_GS_EYE_K_SHOUJO},
-    {.class = TRAINERCLASS_CIPHER_ADMIN_GORIGAN, .music1 = SEQ_GS_EYE_ROCKET, .music2 = SEQ_GS_EYE_ROCKET},
+    {.class = TRAINERCLASS_CIPHER_ADMIN_GORIGAN, .music1 = SEQ_GS_EYE_PLASMA, .music2 = SEQ_GS_EYE_PLASMA},
 };

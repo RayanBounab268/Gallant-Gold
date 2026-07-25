@@ -332,9 +332,9 @@ movedata MOVE_FLY, "Fly"
 movedata MOVE_BIND, "Bind"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_PHYSICAL
-    basepower 15
+    basepower 60
     type TYPE_NORMAL
-    accuracy 85
+    accuracy 90
     pp 20
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -572,9 +572,9 @@ movedata MOVE_BODY_SLAM, "Body Slam"
 movedata MOVE_WRAP, "Wrap"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_PHYSICAL
-    basepower 15
+    basepower 60
     type TYPE_NORMAL
-    accuracy 90
+    accuracy 95
     pp 20
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -1340,9 +1340,9 @@ movedata MOVE_DRAGON_RAGE, "Dragon Rage"
 movedata MOVE_FIRE_SPIN, "Fire Spin"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_SPECIAL
-    basepower 35
+    basepower 65
     type TYPE_FIRE
-    accuracy 85
+    accuracy 90
     pp 15
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -2060,9 +2060,9 @@ movedata MOVE_WATERFALL, "Waterfall"
 movedata MOVE_CLAMP, "Clamp"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_PHYSICAL
-    basepower 35
+    basepower 65
     type TYPE_WATER
-    accuracy 85
+    accuracy 90
     pp 15
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -3148,7 +3148,7 @@ movedata MOVE_PERISH_SONG, "Perish Song"
 movedata MOVE_ICY_WIND, "Icy Wind"
     battleeffect MOVE_EFFECT_LOWER_SPEED_HIT
     pss SPLIT_SPECIAL
-    basepower 55
+    basepower 65
     type TYPE_ICE
     accuracy 95
     pp 15
@@ -5260,9 +5260,9 @@ movedata MOVE_SKY_UPPERCUT, "Sky Uppercut"
 movedata MOVE_SAND_TOMB, "Sand Tomb"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_PHYSICAL
-    basepower 35
+    basepower 65
     type TYPE_GROUND
-    accuracy 85
+    accuracy 90
     pp 15
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -8434,7 +8434,7 @@ movedata MOVE_BULLDOZE, "Bulldoze"
     accuracy 100
     pp 20
     effectchance 100
-    target RANGE_ALL_ADJACENT
+    target RANGE_ADJACENT_OPPONENTS
     priority 0
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KEEP_HP_BAR
     appeal 0x00
@@ -9837,7 +9837,7 @@ movedata MOVE_HOLD_BACK, "Hold Back"
 movedata MOVE_INFESTATION, "Infestation"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_SPECIAL
-    basepower 20
+    basepower 60
     type TYPE_BUG
     accuracy 100
     pp 20
