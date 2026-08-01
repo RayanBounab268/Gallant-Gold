@@ -24,7 +24,7 @@ u16 move_effect_to_subscripts[] =
     [ADD_STATUS_EFF_UPROAR]                         = SUB_SEQ_UPROAR,
     [ADD_STATUS_EFF_PAY_DAY]                        = SUB_SEQ_PAY_DAY,
     [ADD_STATUS_EFF_VANISH_ON_CHARGE_TURN]          = SUB_SEQ_VANISH_ON_CHARGE_TURN,
-    [ADD_STATUS_EFF_CLAMP_START]                    = SUB_SEQ_CLAMP_START,
+    [ADD_STATUS_EFF_BIND_START]                     = SUB_SEQ_BIND_START,
     [ADD_STATUS_EFF_RECOIL_1_4]                     = SUB_SEQ_RECOIL_1_4,
     [ADD_STATUS_EFF_BOOST_STATS_ATTACK_UP]          = SUB_SEQ_BOOST_STATS, // attack +1
     [ADD_STATUS_EFF_BOOST_STATS_DEFENSE_UP]         = SUB_SEQ_BOOST_STATS, // defense +1
@@ -205,9 +205,7 @@ u16 move_effect_to_subscripts[] =
     [ADD_STATUS_EFF_TIDY_UP]                        = SUB_SEQ_TIDY_UP,
     [ADD_STATUS_EFF_BURN_AND_DRAIN_HEALTH]          = SUB_SEQ_BURN_AND_DRAIN_HEALTH,
     [ADD_STATUS_EFF_INCINERATE]                     = SUB_SEQ_HANDLE_INCINERATE,
-    [ADD_STATUS_EFF_BOOST_STATS_ATTACK_UP_6]        = SUB_SEQ_BOOST_STATS, // attack +6
-    [ADD_STATUS_EFF_BOOST_STATS_DEFENSE_UP_6]       = SUB_SEQ_BOOST_STATS, // defense +6
-    [ADD_STATUS_EFF_BOOST_STATS_SPEED_UP_6]         = SUB_SEQ_BOOST_STATS, // speed +6
+    [ADD_STATUS_EFF_BOOST_STATS_SPEED_UP_6]         = SUB_SEQ_BOOST_STATS,
     [ADD_STATUS_EFF_ADD_TYPE_GRASS]                 = SUB_SEQ_ADD_TYPE_GRASS,
     [ADD_STATUS_EFF_ADD_TYPE_GHOST]                 = SUB_SEQ_ADD_TYPE_GHOST,
     [ADD_STATUS_EFF_CHANGE_TARGET_TO_PSYCHIC_TYPE]  = SUB_SEQ_CHANGE_TARGET_TO_PSYCHIC_TYPE,
@@ -228,12 +226,13 @@ u16 move_effect_to_subscripts[] =
     [ADD_STATUS_EFF_STUFF_CHEEKS]                   = SUB_SEQ_STUFF_CHEEKS,
     [ADD_STATUS_EFF_POWDER]                         = SUB_SEQ_POWDER,
     [ADD_STATUS_EFF_LASER_FOCUS]                    = SUB_SEQ_LASER_FOCUS,
+    [ADD_STATUS_EFF_GIVE_HELD_ITEM]                 = SUB_SEQ_GIVE_HELD_ITEM,
 };
 
 
 void GetMoveDataTable(void *dest)
 {
-    ArchiveDataLoadOfs(dest, ARC_MOVE_DATA, 0, 0, sizeof(struct BattleMove)*(NUM_OF_MOVES+1));
+    ReadFromNarcMemberByIdPair(dest, ARC_MOVE_DATA, 0, 0, sizeof(struct BattleMove)*(NUM_OF_MOVES+1));
 }
 
 
@@ -247,7 +246,7 @@ void GetMoveDataTable(void *dest)
 u32 LONG_CALL GetMoveData(u16 id, u32 field)
 {
     struct BattleMove *bm = sys_AllocMemory(0, sizeof(struct BattleMove));
-    ArchiveDataLoad(bm, ARC_MOVE_DATA, id);
+    ReadWholeNarcMemberByIdPair(bm, ARC_MOVE_DATA, id);
     u32 ret = 0;
 
     switch (field)

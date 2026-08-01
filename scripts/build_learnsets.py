@@ -13,6 +13,7 @@ import json
 import os
 import argparse
 import glob
+import fnmatch
 
 
 def load_species_header(file_path):
@@ -76,13 +77,27 @@ def load_form_to_species_mapping(form_map_path):
     return form_map
 
 
+def file_to_gen_key(gen_file):
+    gen_key = os.path.basename(gen_file)[:-5]  # remove .json extension
+    if re.match(r"^\d{2}_", gen_key):
+        gen_key = gen_key[3:]  # remove XX_ prefix
+    return gen_key
+
+
+def get_move_signature(entry):
+    return {
+        "LevelMoves": {m.get("Move") for m in entry.get("LevelMoves", []) if "Move" in m},
+        "MachineMoves": set(entry.get("MachineMoves", [])),
+        "EggMoves": set(entry.get("EggMoves", [])),
+        "TutorMoves": set(entry.get("TutorMoves", [])),
+    }
+
+
 def merge_learnsets(ordered_data, cutoff_gen, inherit_level, inherit_egg, inherit_machine, inherit_tutor):
     merged = {}
 
     for gen_file, gen_data in ordered_data:
-        gen_key = os.path.basename(gen_file)[:-5]  # remove .json extension
-        if re.match(r"^\d{2}_", gen_key):
-            gen_key = gen_key[3:]  # remove XX_ prefix
+        gen_key = file_to_gen_key(gen_file)
 
         for species, fields in gen_data.items():
             merged.setdefault(species, {
@@ -114,6 +129,42 @@ def merge_learnsets(ordered_data, cutoff_gen, inherit_level, inherit_egg, inheri
     return merged
 
 
+def collapse_redundant_form_entries(species_learnsets, form_to_base, ordered_data, cutoff_gen):
+    keep_separate = set()
+    observed_pairs = set()
+
+    for gen_file, gen_data in ordered_data:
+        gen_key = file_to_gen_key(gen_file)
+        for form_species, base_species in form_to_base.items():
+            form_data = gen_data.get(form_species)
+            base_data = gen_data.get(base_species)
+            if not form_data or not base_data:
+                continue
+
+            observed_pairs.add(form_species)
+            form_sig = get_move_signature(form_data)
+            base_sig = get_move_signature(base_data)
+
+            has_form_only = any(
+                form_sig[field] - base_sig[field]
+                for field in ["LevelMoves", "MachineMoves", "EggMoves", "TutorMoves"]
+            )
+            if has_form_only:
+                keep_separate.add(form_species)
+
+        if gen_key == cutoff_gen:
+            break
+
+    removed = 0
+    for form_species, base_species in form_to_base.items():
+        if form_species not in species_learnsets or base_species not in species_learnsets:
+            continue
+        if form_species in observed_pairs and form_species not in keep_separate:
+            del species_learnsets[form_species]
+            removed += 1
+    return removed
+
+
 def load_tutor_move_list(file_path):
     move_list = []
     in_array = False
@@ -132,6 +183,14 @@ def load_tutor_move_list(file_path):
                 if matches:
                     move_list.append(matches[0])
     return move_list
+
+
+def grab_learnset_field(species_learnsets, species_name, field):
+    form_to_base = load_form_to_species_mapping("data/FormToSpeciesMapping.c")
+    learnset = species_learnsets.get(species_name, {}).get(field, [])
+    if learnset == [] and species_name in form_to_base:
+        learnset = species_learnsets.get(form_to_base[species_name], {}).get(field, [])
+    return learnset
 
 
 def write_learnset_constants_inc(max_num_levelup_moves, output_path):
@@ -175,11 +234,11 @@ def write_machine_data(species_dict, species_learnsets, machine_moves, output_pa
             learnset = []
             levelup_moves = {}
             if species_name:
-                learnset = species_learnsets.get(species_name, {}).get("MachineMoves", [])
+                learnset = grab_learnset_field(species_learnsets, species_name, "MachineMoves")
                 learnset = list(set(m.strip() for m in learnset))
 
                 levelup_moves = {
-                    m["Move"] for m in species_learnsets.get(species_name, {}).get("LevelMoves", [])
+                    m["Move"] for m in grab_learnset_field(species_learnsets, species_name, "LevelMoves")
                     if "Move" in m
                 }
 
@@ -217,7 +276,7 @@ def write_levelup_data(species_dict, moves_dict, species_learnsets, max_num_leve
             species_name = species_id_to_name.get(species_id)
             learnset = []
             if species_name:
-                learnset = species_learnsets.get(species_name, {}).get("LevelMoves", [])
+                learnset = grab_learnset_field(species_learnsets, species_name, "LevelMoves")
 
             entries = []
 
@@ -263,7 +322,7 @@ def write_eggmove_data(species_dict, moves_dict, species_learnsets, max_num_egg_
             egg_moves = []
 
             if species_name:
-                egg_moves = species_learnsets.get(species_name, {}).get("EggMoves", [])
+                egg_moves = grab_learnset_field(species_learnsets, species_name, "EggMoves")
 
             moves = []
             for move in egg_moves:
@@ -311,7 +370,7 @@ def write_tutor_data(species_dict, moves_dict, species_learnsets, tutor_moves, o
 
             parts = [0] * words_per_row
             if species_name:
-                tutor_list = species_learnsets.get(species_name, {}).get("TutorMoves", [])
+                tutor_list = grab_learnset_field(species_learnsets, species_name, "TutorMoves")
                 for move in tutor_list:
                     idx = move_to_index.get(move)
                     if idx is None:
@@ -345,6 +404,7 @@ if __name__ == "__main__":
     parser.add_argument("--inherit-egg", action="store_true")
     parser.add_argument("--inherit-machine", action="store_true")
     parser.add_argument("--inherit-tutor", action="store_true")
+    parser.add_argument("--ignore-files", nargs="*", default=[])
 
     args = parser.parse_args()
 
@@ -354,9 +414,14 @@ if __name__ == "__main__":
     moves_dict = load_moves_header("include/constants/moves.h")
 
     if args.generate:
+        ignore_patterns = set(args.ignore_files or [])
         ordered_learnsets = [
             (file, json.load(open(file, encoding="utf-8")))
             for file in sorted(glob.glob(os.path.join("data/learnsets/base", "*.json")))
+            if not any(
+                fnmatch.fnmatch(os.path.basename(file), pat) or fnmatch.fnmatch(file, pat)
+                for pat in ignore_patterns
+            )
         ]
 
         merged_for_dump = merge_learnsets(
@@ -367,6 +432,8 @@ if __name__ == "__main__":
             args.inherit_machine,
             args.inherit_tutor,
         )
+        form_to_base = load_form_to_species_mapping("data/FormToSpeciesMapping.c")
+        collapse_redundant_form_entries(merged_for_dump, form_to_base, ordered_learnsets, args.cutoff)
 
         os.makedirs(os.path.dirname(args.generate), exist_ok=True)
         with open(args.generate, "w", encoding="utf-8") as f:
@@ -386,9 +453,6 @@ if __name__ == "__main__":
             print(f"[ERROR]: learnsets file not found: {args.learnsets}")
             exit(1)
 
-        for form_species, base_species in form_to_base.items():
-            if form_species not in species_learnsets and base_species in species_learnsets:
-                species_learnsets[form_species] = dict(species_learnsets[base_species])
 
         max_num_levelup_moves = max(
             (len(data.get("LevelMoves", [])) + 1)  # +1 for terminator

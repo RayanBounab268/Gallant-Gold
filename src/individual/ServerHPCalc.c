@@ -41,8 +41,9 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
         sp->client_no_hit[sp->defence_client] = sp->attack_client;
 
         if ((sp->battlemon[sp->defence_client].condition2 & STATUS2_SUBSTITUTE)
-         && (sp->damage < 0)
-         && (GetBattlerAbility(sp, sp->attack_client) != ABILITY_INFILTRATOR))
+            && (sp->damage < 0)
+            && (GetBattlerAbility(sp, sp->attack_client) != ABILITY_INFILTRATOR)
+            && !IsMoveSoundBased(sp->current_move_index))
         {
             if ((sp->battlemon[sp->defence_client].moveeffect.substituteHp + sp->damage) <= 0)
             {
@@ -59,12 +60,15 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
             }
             sp->oneSelfFlag[sp->defence_client].status_flag |= SELF_STATUS_FLAG_SUBSTITUTE_HIT;
             sp->battlerIdTemp = sp->defence_client;
-            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_HIT_SUBSTITUTE);
-            sp->server_seq_no = 22;
-            sp->next_server_seq_no = 29;
         }
         else
         {
+            BOOL negatedDamage = FALSE;
+            // limit damage value to current hp
+            if ((sp->battlemon[sp->defence_client].hp + sp->damage) <= 0) {
+                sp->damage = (sp->battlemon[sp->defence_client].hp) * -1;
+            }
+
             if (sp->moveTbl[sp->current_move_index].effect == MOVE_EFFECT_LEAVE_WITH_1_HP)
             {
                 if ((sp->battlemon[sp->defence_client].hp + sp->damage) <= 0)
@@ -85,6 +89,16 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
                 else
                 {
                     sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = FALSE;
+                }
+            }
+
+            if (sp->moveConditionsFlags[sp->defence_client].endure)
+            {
+                if ((sp->battlemon[sp->defence_client].hp + sp->damage) <= 0) {
+                    sp->damage = (sp->battlemon[sp->defence_client].hp - 1) * -1;
+                }
+                if (sp->damage == 0) {
+                    negatedDamage = TRUE;
                 }
             }
 
@@ -113,20 +127,31 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
                         sp->waza_status_flag |= MOVE_STATUS_FLAG_HELD_ON_ITEM;
                     }
                 }
+                if (sp->damage == 0) {
+                    negatedDamage = TRUE;
+                }
             }
-
 
 #ifdef DEBUG_BATTLE_SCENARIOS
             // debug_printf("In ServerHPCalc\n");
+            debug_printf("[Move %d     Damage %d%s]", sp->current_move_index, sp->damage, (sp->critical > 1) ? " (crit)" : "");
             struct TestBattleScenario *scenario = TestBattle_GetCurrentScenario();
             if (scenario != NULL && TestBattle_HasMoreExpectations()) {
+#ifdef DEBUG_DAMAGE_CALC
+                debug_printf("[ServerHPCalc] move=%d target=%d damage=%d status=%08lx\n",
+                             sp->current_move_index,
+                             sp->defence_client,
+                             sp->damage * -1,
+                             (unsigned long)sp->waza_status_flag);
+#endif
                 // debug_printf("Has more expectations\n")
                 if (scenario->expectations[scenario->expectationPassCount].expectationType == EXPECTATION_TYPE_HP_BAR
                     && sp->defence_client == scenario->expectations[scenario->expectationPassCount].battlerIDOrPartySlot) {
                     for (int i = 0; i < 16; i++) {
                         // debug_printf("sp->damage: %d, expect: %d\n", sp->damage, scenario->expectations[scenario->expectationPassCount].expectationValue.hpTaken[i]);
-                        if (sp->damage == scenario->expectations[scenario->expectationPassCount].expectationValue.hpTaken[i]
-                            || sp->damage * -1 == scenario->expectations[scenario->expectationPassCount].expectationValue.hpTaken[i]) {
+                        if ((u32)sp->damage == scenario->expectations[scenario->expectationPassCount].expectationValue.hpRecovered[i]
+                            || (u32)(sp->damage * -1) == scenario->expectations[scenario->expectationPassCount].expectationValue.hpTaken[i]) {
+                                debug_printf(" ✅");
                                 scenario->expectationPassCount++;
                                 break;
                         }
@@ -134,6 +159,7 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
                     // debug_printf("\n");
                 }
             }
+            debug_printf("\n");
 #endif
 
             /**
@@ -146,20 +172,24 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
             {
                 sp->battlemon[sp->defence_client].hit_count++;
             }
+            int storedDamage = sp->damage;
+            if (storedDamage == 0 && negatedDamage) {
+                storedDamage = 1;
+            }
             if (GetMoveSplit(sp, sp->current_move_index) == SPLIT_PHYSICAL)
             {
-                sp->oneTurnFlag[sp->defence_client].physical_damage[sp->attack_client] = sp->damage;
+                sp->oneTurnFlag[sp->defence_client].physical_damage[sp->attack_client] = storedDamage;
                 sp->oneTurnFlag[sp->defence_client].physical_damager = sp->attack_client;
                 sp->oneTurnFlag[sp->defence_client].physical_damager_bit |= No2Bit(sp->attack_client);
-                sp->oneSelfFlag[sp->defence_client].physical_damage = sp->damage;
+                sp->oneSelfFlag[sp->defence_client].physical_damage = storedDamage;
                 sp->oneSelfFlag[sp->defence_client].physical_damager = sp->attack_client;
             }
             else if(GetMoveSplit(sp, sp->current_move_index) == SPLIT_SPECIAL)
             {
-                sp->oneTurnFlag[sp->defence_client].special_damage[sp->attack_client] = sp->damage;
+                sp->oneTurnFlag[sp->defence_client].special_damage[sp->attack_client] = storedDamage;
                 sp->oneTurnFlag[sp->defence_client].special_damager = sp->attack_client;
                 sp->oneTurnFlag[sp->defence_client].special_damager_bit |= No2Bit(sp->attack_client);
-                sp->oneSelfFlag[sp->defence_client].special_damage = sp->damage;
+                sp->oneSelfFlag[sp->defence_client].special_damage = storedDamage;
                 sp->oneSelfFlag[sp->defence_client].special_damager = sp->attack_client;
             }
 
@@ -177,15 +207,15 @@ void ServerHPCalc(struct BattleSystem *bw, struct BattleStruct *sp)
             sp->battlerIdTemp = sp->defence_client;
             sp->hp_calc_work = sp->damage;
 
-            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_HP_CHANGE);
-            sp->server_seq_no = 22;
-            sp->next_server_seq_no = 29;
+            if (IsMoveSpreadMove(bw, sp, sp->current_move_index) && !(sp->server_status_flag & SERVER_STATUS_FLAG_SIMULTANEOUS_DAMAGE)) {
+                sp->server_status_flag |= SERVER_STATUS_FLAG_SIMULTANEOUS_DAMAGE;
+            }
 
-            sp->server_status_flag |= SERVER_STATUS_FLAG_MOVE_HIT;
+            if (sp->server_status_flag & SERVER_STATUS_FLAG_SIMULTANEOUS_DAMAGE) {
+                if (sp->damageForSpreadMoves[sp->defence_client] == 0) {
+                    sp->damageForSpreadMoves[sp->defence_client] = sp->damage;
+                }
+            }
         }
-    }
-    else
-    {
-        sp->server_seq_no = 29;
     }
 }

@@ -332,11 +332,13 @@
     .long \val
     .endm
 
-    .macro ChangeStatStage arg_0, arg_1, arg_2
+    .macro ChangeStatStage arg_0, arg_1, arg_2, arg_3, arg_4
     .long 51
-    .long (((\arg_0 - .) / 4) - 3)
-    .long (((\arg_1 - .) / 4) - 2)
-    .long (((\arg_2 - .) / 4) - 1)
+    .long (((\arg_0 - .) / 4) - 5)
+    .long (((\arg_1 - .) / 4) - 4)
+    .long (((\arg_2 - .) / 4) - 3)
+    .long (((\arg_3 - .) / 4) - 2)
+    .long (((\arg_4 - .) / 4) - 1)
     .endm
 
     .macro UpdateMonData op, battler, param, val
@@ -1522,7 +1524,85 @@
     .long \arg_1
     .endm
 
-    .equ BASE_ENGINE_BTL_SCR_CMDS_MAX, 277
+    .macro AbilityPopup arg_0:req, arg_1=-1
+    .long 278
+    .long \arg_0
+    .long \arg_1
+    .endm
+
+    .macro ActivateParadoxAbility arg_0
+    .long 279
+    .long \arg_0
+    .endm
+
+    .macro ResetParadoxAbility arg_0
+    .long 280
+    .long \arg_0
+    .endm
+
+    .macro SetCurrentMoveSwitchingStatus arg_0
+    .long 281
+    .long \arg_0
+    .endm
+
+    .macro TrySynchronizeStatus arg_0
+    .long 282
+    .long (((\arg_0 - .) / 4) - 1)
+    .endm
+
+    .macro TryCureStatusBerry arg_0, arg_1
+    .long 283
+    .long \arg_0
+    .long (((\arg_1 - .) / 4) - 1)
+    .endm
+
+    .macro BatchUpdateHealthBar
+    .long 284
+    .endm
+
+    .macro BatchUpdateHealthBarValue
+    .long 285
+    .endm
+
+    .macro BatchFollowupMessage arg_0
+    .long 286
+    .long \arg_0
+    .endm
+
+    .macro BatchEffectivenessMessage arg_0, arg_1, arg_2
+    .long 287
+    .long \arg_0
+    .long \arg_1
+    .long (((\arg_2 - .) / 4) - 1)
+    .endm
+
+    .macro DivideVarByValueRoundUp var, val
+    .long 288
+    .long \var
+    .long \val
+    .endm
+
+    .macro IsPursuitActive arg_0
+    .long 289
+    .long (((\arg_0 - .) / 4) - 1)
+    .endm
+
+    .macro GoBackToBeforeMove
+    .long 290
+    .endm
+
+    .macro MakeTotem arg_0, arg_1
+    .long 291
+    .long \arg_0
+    .long (((\arg_1 - .) / 4) - 1)
+    .endm
+
+    .macro GetMonByCottonDownOrder arg_0
+    .long 292
+    .long (((\arg_0 - .) / 4) - 1)
+    .endm
+
+    .equ BASE_ENGINE_BTL_SCR_CMDS_MAX, 292
 
     // .macro YourCustomCommand
     // .long (BASE_ENGINE_BTL_SCR_CMDS_MAX + 1)

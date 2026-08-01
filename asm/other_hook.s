@@ -270,28 +270,6 @@ bx r3
 .pool
 
 
-.global UseItemMonAttrChangeCheck_hook
-UseItemMonAttrChangeCheck_hook:
-push {r1-r7}
-
-mov r0, r5
-mov r1, r4 // so that the memory can be freed
-bl UseItemMonAttrChangeCheck
-
-pop {r1-r7}
-cmp r0, #1
-bne return_to_0207C2D2
-mov r0, #31
-ldr r1, =0x0207C2D0 | 1 // else return 31
-bx r1
-
-return_to_0207C2D2:
-ldr r0, =0x0207C2D2 | 1
-bx r0
-
-.pool
-
-
 .global UseItemMonAttrLoadDiffMessage_hook
 UseItemMonAttrLoadDiffMessage_hook:
 ldr r1, =partyMenuSignal
@@ -809,8 +787,16 @@ bx  r0
 
 _vanillaAddBoxMonHandling:
 add sp, #0x14
-ldr r0, =0x0206F682 | 1
+cmp r7, #0xba
+bls _returnTo0206F684
+ldr r0, =0x0206FA50 | 1
 bx  r0
+
+_returnTo0206F684:
+mov r0, r7
+lsl r0, #1
+ldr r1, =0x0206F684 | 1
+bx  r1
 
 .pool
 
@@ -861,3 +847,54 @@ word_to_store_form_at:
 .global gTriggerDouble
 gTriggerDouble:
 .word 0
+
+.global CreateStarter_SetStarterSpecies_hook
+CreateStarter_SetStarterSpecies_hook:
+push {r0-r7}
+mov r0, r2
+sub r0, #8
+bl CreateStarter_SetStarterSpecies
+pop {r0-r7}
+
+ldr r0, [r0, #0x20]
+ldr r0, [r0, #0x0]
+ldr r3, =MapHeader_GetMapSec
+bl bx_r3
+
+ldr r2, =0x0209609C | 1
+bx r2
+
+.pool
+
+
+.global CreateStarterMon_hook
+CreateStarterMon_hook:
+add r0, r4, r5
+ldr r1, [r6, #0]
+ldr r2, [sp, #0x18]
+bl CreateStarter_CreateMon
+
+mov r0, #12
+str r0, [sp, #0]
+mov r0, #11
+ldr r3, =0x020960F0 | 1
+bx r3
+
+.pool
+
+
+.global CreateMonSprites_hook
+CreateMonSprites_hook:
+ldr r3, [sp, #0]
+sub sp, #4
+str r4, [sp, #0]
+bl CreateMonSprites_HandleForm
+add sp, #4
+
+add r0, r5, #0
+add r1, r5, #0
+
+ldr r3, =0x021E70A0 | 1
+bx r3
+
+.pool

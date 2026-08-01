@@ -77,7 +77,12 @@ PYTHON = $(PYTHON_NO_VENV)
 VENV_ACTIVATE =
 endif
 
-.PHONY: clean all dumprom
+.PHONY: clean all dumprom move_narc
+
+move_narc clean restore: NOSCAN = 1
+
+NOSCAN ?= 0
+
 
 default: all
 
@@ -88,7 +93,11 @@ venv: $(VENV_ACTIVATE)
 # divorce this python3 from venv so that it works
 $(VENV_ACTIVATE):
 	$(PYTHON_NO_VENV) -m venv $(VENV)
+ifeq ($(MSYS2), 0)
+	$(PYTHON) -m pip install ndspy==4.1.0
+else
 	$(PYTHON) -m pip install -r $(REQUIREMENTS)
+endif
 
 endif
 
@@ -96,10 +105,14 @@ endif
 ADPCMXQ := tools/adpcm-xq
 ARMIPS := tools/armips
 BLZ := tools/blz
-BTX := $(PYTHON) tools/overworld-btx.py
+BTX := tools/btx
 ENCODEPWIMG := tools/ENCODE_IMG
 GFX := tools/nitrogfx
 MSGENC := tools/msgenc
+MOVEDATAGEN := tools/movedatagen
+POKEDEXDATAGEN := tools/pokedexdatagen
+SPECIESDATAGEN := tools/speciesdatagen
+TRAINERDATAGEN := tools/trainerdatagen
 NARCHIVE := $(PYTHON) tools/narcpy.py
 NDSTOOL := tools/ndstool
 NTRWAVTOOL := $(PYTHON) tools/ntrWavTool.py
@@ -150,6 +163,7 @@ include data/itemdata/itemdata.mk
 include data/codetables.mk
 include narcs.mk
 include overlays.mk
+include dump.mk
 
 ####################### Build Tools #######################
 MSGENC_SOURCES := $(wildcard tools/source/msgenc/*.cpp) $(wildcard tools/source/msgenc/*.h)
@@ -215,6 +229,26 @@ $(GFX): $(NITROGFX_SOURCES)
 
 TOOLS += $(GFX)
 
+$(MOVEDATAGEN): $(wildcard tools/source/movedatagen/*.c) data/Moves.c include/move_data.h include/config.h
+	cd tools/source/movedatagen ; $(MAKE)
+
+TOOLS += $(MOVEDATAGEN)
+
+$(POKEDEXDATAGEN): $(wildcard tools/source/pokedexdatagen/*.c) data/PokedexSort.c data/PokedexArea.c include/pokedex_archive_data.h include/constants/pokedex.h
+	cd tools/source/pokedexdatagen ; $(MAKE)
+
+TOOLS += $(POKEDEXDATAGEN)
+
+$(SPECIESDATAGEN): $(wildcard tools/source/speciesdatagen/*.c) data/Species.c include/species_data.h include/config.h
+	cd tools/source/speciesdatagen ; $(MAKE)
+
+TOOLS += $(SPECIESDATAGEN)
+
+$(TRAINERDATAGEN): $(wildcard tools/source/trainerdatagen/*.c) data/Trainers.c include/trainer_data.h include/constants/trainerclass.h include/constants/pokemon.h
+	cd tools/source/trainerdatagen ; $(MAKE)
+
+TOOLS += $(TRAINERDATAGEN)
+
 $(O2NARC): $(wildcard tools/source/o2narc/*.cpp) $(wildcard tools/source/o2narc/*.h)
 	cd tools/source/o2narc ; $(MAKE)
 	mv tools/source/o2narc/o2narc $(O2NARC)
@@ -227,34 +261,44 @@ $(ENCODEPWIMG):
 
 TOOLS += $(ENCODEPWIMG)
 
+$(BTX):
+	cd tools/source/btx ; $(MAKE)
+	mv tools/source/btx/btx $(BTX)
+
+TOOLS += $(BTX)
+
 ####################### Build #######################
-rom_gen.ld:$(LINK) $(OUTPUT) rom.ld $(VENV_ACTIVATE)
-	cp rom.ld rom_gen.ld
-	$(PYTHON) scripts/generate_ld.py
+$(BUILD)/rom_gen.ld:$(LINK) $(OUTPUT) rom.ld
+	cp rom.ld $(BUILD)/rom_gen.ld
+	$(PYTHON) scripts/generate_ld.py $(BUILD)/rom_gen.ld $(LINK)
 
 # create output folders if they do not exist
-define FOLDER_CREATE_DEFINE
-$1: ; mkdir -p $1
-endef
-$(foreach folder, $(CODE_BUILD_DIRS), $(eval $(call FOLDER_CREATE_DEFINE,$(folder))))
+$(CODE_BUILD_DIRS):
+	mkdir -p $@
 
 # generate .d dependency files that are included as part of compiling if it does not exist
 define SRC_OBJ_INC_DEFINE
 # this generates the objects as part of generating the dependency list which will just be massive files of rules
-$1: $2 $(CODE_BUILD_DIRS) $(LEARNSETS_HEADER) $(BATTLETESTS_HEADER)
+$1: $2 $(LEARNSETS_HEADER) $(BATTLETESTS_HEADER) | $(dir $1)
 	$(CC) -MMD -MF $(basename $1).d $(CFLAGS) -c $2 -o $1
 	@#printf "\t$(CC) $(CFLAGS) -c $2 -o $1" >> $(basename $1).d
 
 -include $(basename $1).d
 endef
+
+ifneq (1,$(NOSCAN))
 $(foreach src, $(ALL_C_SRCS), $(eval $(call SRC_OBJ_INC_DEFINE,$(patsubst $(C_SUBDIR)/%.c,$(BUILD)/%.o, $(src)),$(src))))
+endif
 
 define ASM_OBJ_INC_DEFINE
 # these should have similar dependency scanning, but we do not currently use them in a way conducive to it
-$1: $2 $(CODE_BUILD_DIRS)
+$1: $2 | $(dir $1)
 	$(AS) $(ASFLAGS) -c $2 -o $1
 endef
+
+ifneq (1,$(NOSCAN))
 $(foreach src, $(ALL_ASM_SRCS), $(eval $(call ASM_OBJ_INC_DEFINE,$(patsubst $(ASM_SUBDIR)/%.s,$(BUILD)/%.o, $(src)),$(src))))
+endif
 
 $(LINK):$(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $(OBJS)
@@ -262,17 +306,18 @@ $(LINK):$(OBJS)
 $(OUTPUT):$(LINK)
 	$(OBJCOPY) -O binary $< $@
 
-
-
-all: $(TOOLS) $(OUTPUT) $(OVERLAY_OUTPUTS)
+# only reextract from the rom if the romname is newer than the extracted arm9.bin
+$(BASE)/arm9.bin: $(ROMNAME) $(NDSTOOL) $(VENV_ACTIVATE)
 	rm -rf $(BASE)
 	@mkdir -p $(REQUIRED_DIRECTORIES)
+	$(NDSTOOL) -x $(ROMNAME) -9 $(BASE)/arm9.bin -7 $(BASE)/arm7.bin -y9 $(BASE)/overarm9.bin -y7 $(BASE)/overarm7.bin -d $(FILESYS) -y $(BASE)/overlay -t $(BASE)/banner.bin -h $(BASE)/header.bin
+	$(NARCHIVE) extract $(FILESYS)/a/0/2/8 -o $(BUILD)/a028/ -nf
+
+all: $(OUTPUT) $(OVERLAY_OUTPUTS) $(TOOLS) $(BASE)/arm9.bin
 	@# find and delete macOS and windows files
 	find . \( -name "*.DS_Store" -o -name "*:Zone.Identifier" \) -delete
-	$(NDSTOOL) -x $(ROMNAME) -9 $(BASE)/arm9.bin -7 $(BASE)/arm7.bin -y9 $(BASE)/overarm9.bin -y7 $(BASE)/overarm7.bin -d $(FILESYS) -y $(BASE)/overlay -t $(BASE)/banner.bin -h $(BASE)/header.bin
-	@echo "$(ROMNAME) Decompression successful!!"
-	$(NARCHIVE) extract $(FILESYS)/a/0/2/8 -o $(BUILD)/a028/ -nf
 	$(PYTHON) scripts/make.py $(CFLAGS)
+# TODO: find a convenient way to not have this be a separate $(MAKE)
 	$(MAKE) move_narc
 	$(ARMIPS) armips/global.s $(ARMIPS_FLAGS)
 	$(NARCHIVE) create $(FILESYS)/a/0/2/8 $(BUILD)/a028/ -nf
@@ -293,7 +338,7 @@ restore_build: | restore all
 
 ####################### Clean #######################
 clean:
-	rm -rf $(BUILD) $(BASE) rom_gen.ld rom_gen_battle.ld
+	rm -rf $(BUILD) $(BASE) $(BUILD)/rom_gen.ld $(BUILD)/rom_gen_battle.ld
 	rm -rf $(shell find . -type d -name "generated")
 	@echo "Build artifacts removed."
 
@@ -305,7 +350,7 @@ ALL_CODE_OBJS := $(patsubst $(C_SUBDIR)/%.c,$(BUILD)/%.o,$(ALL_C_SRCS)) \
  $(patsubst $(C_SUBDIR)/%.c,$(BUILD)/%.d,$(ALL_C_SRCS))
 
 clean_code:
-	rm -f $(ALL_CODE_OBJS) $(LINKED_OUTPUTS) $(OUTPUT) $(OVERLAY_OUTPUTS) rom_gen.ld rom_gen_battle.ld
+	rm -f $(ALL_CODE_OBJS) $(LINKED_OUTPUTS) $(OUTPUT) $(OVERLAY_OUTPUTS) $(BUILD)/rom_gen.ld $(BUILD)/rom_gen_battle.ld
 
 ####################### Final ROM Build #######################
 CODE_ADDON_ARTIFACTS := $(wildcard $(BUILD)/a028/9_*) $(wildcard $(BUILD)/a028/8_1*) $(wildcard build/$(BUILD)/8_2*) $(BUILD)/a028/8_07 $(BUILD)/a028/8_08 $(BUILD)/a028/8_09
@@ -331,7 +376,7 @@ move_narc: $(NARC_FILES)
 	@echo "opening demo files:"
 	cp $(OPENDEMO_NARC) $(OPENDEMO_TARGET)
 
-	@echo "mon data properties:"
+	@echo "mon personal data:"
 	cp $(MONDATA_NARC) $(MONDATA_TARGET)
 
 	@echo "sprite offsets:"
@@ -394,11 +439,13 @@ move_narc: $(NARC_FILES)
 	cp $(OTHERPOKE_NARC) $(OTHERPOKE_TARGET)
 
 	@echo "pokemon icons:"
-	$(ARMIPS) armips/data/iconpalettetable.s
 	cp $(ICONGFX_NARC) $(ICONGFX_TARGET)
 
 	@echo "wild encounters:"
 	cp $(ENCOUNTER_NARC) $(ENCOUNTER_TARGET)
+
+	@echo "safari zone encounters:"
+	cp $(SAFARI_ENCOUNTER_NARC) $(SAFARI_ENCOUNTER_TARGET)
 
 	@echo "pokemon overworlds:"
 	cp $(OVERWORLDS_NARC) $(OVERWORLDS_TARGET)
@@ -436,6 +483,9 @@ move_narc: $(NARC_FILES)
 	@echo "trainer gfx:"
 	cp $(TRAINER_GFX_NARC) $(TRAINER_GFX_TARGET)
 
+	@echo "trainer back gfx:"
+	cp $(TRAINER_GFX_BACK_NARC) $(TRAINER_GFX_BACK_TARGET)
+
 	@echo "levelup learnset:"
 	cp $(LEVELUPLEARNSET_NARC) $(LEVELUPLEARNSET_TARGET)
 
@@ -445,7 +495,7 @@ move_narc: $(NARC_FILES)
 
 
 	@echo "baby mons:"
-	$(ARMIPS) armips/data/babymons.s
+	cp $(BABYMONS_BIN) $(BABYMONS_TARGET)
 
 	@if test -s build/a028/8_00; then \
 		rm -rf build/a028/8_0 build/a028/8_1 build/a028/8_2 build/a028/8_3 build/a028/8_4 build/a028/8_5 build/a028/8_6 build/a028/8_7 build/a028/8_8 build/a028/8_9; \
@@ -461,11 +511,11 @@ move_narc: $(NARC_FILES)
 	@echo "base experience table:"
 	cp $(BASE_EXPERIENCE_TABLE_BIN) $(BASE_EXPERIENCE_TABLE_TARGET)
 
-	@echo "mon overworld data:"
-	$(ARMIPS) $(OVERWORLD_DATA_DEPENDENCIES)
+	@echo "icon palette table:"
+	cp $(ICON_PALETTE_TABLE_BIN) $(ICON_PALETTE_TABLE_TARGET)
 
-	@echo "species to ow gfx table:"
-	cp $(SPECIES_TO_OW_GFX_BIN) $(SPECIES_TO_OW_GFX_TARGET)
+	@echo "species to ow female table:"
+	cp $(SPECIES_TO_OW_FEMALE_BIN) $(SPECIES_TO_OW_FEMALE_TARGET)
 
 	@echo "form data table:"
 	cp $(POKEFORMDATATBL_BIN) $(POKEFORMDATATBL_TARGET)
@@ -485,48 +535,14 @@ move_narc: $(NARC_FILES)
 	@echo "battle tests:"
 	cp $(BATTLETESTS_BIN) $(BATTLETESTS_TARGET)
 
+	@echo "background gfx ids:"
+	cp $(BACKGROUND_GFX_IDS_BIN) $(BACKGROUND_GFX_IDS_TARGET)
 
-DUMP_SCRIPT_LOCATION := tools/source/dumptools
-# the goal here is to extract the required narcs to the proper folders for the dump scripts to work.
-# learnsets are covered by script migration
-dumprom: $(VENV_ACTIVATE) $(TOOLS)
-	$(MAKE) clean
-	chmod +x $(DUMP_SCRIPT_LOCATION)/*.sh
-
-	./$(DUMP_SCRIPT_LOCATION)/dumprom.sh
-	mkdir -p $(BUILD) $(BUILD_NARC) $(BUILD)/a028/
-# dump human overworlds
-	#./$(DUMP_SCRIPT_LOCATION)/dump_human_overworlds.sh
-# dump everything covered by this script
-	$(NARCHIVE) extract $(FILESYS)/a/0/2/8 -o $(BUILD)/a028/ -nf
-# mondata:  needed by migrate_learnsets.py
-	cp $(MONDATA_TARGET) $(BUILD_NARC)/mondata
-	$(NARCHIVE) extract $(BUILD_NARC)/mondata -o $(MONDATA_DIR)
-	rm $(BUILD_NARC)/mondata
-# learnsets:  needed by migrate_learnsets.py
-	cp $(LEVELUPLEARNSET_TARGET) $(BUILD_NARC)/learnset
-	$(NARCHIVE) extract $(BUILD_NARC)/learnset -o $(LEVELUPLEARNSET_DIR)
-# kowaza:  needed by migrate_learnsets.py
-	cp $(EGGLEARNSET_TARGET) $(BUILD_NARC)/kowaza
-	$(NARCHIVE) extract $(BUILD_NARC)/kowaza -o $(BUILD)/kowaza
-	$(PYTHON) tools/source/dumptools/migrate_learnsets.py
-	rm -rf $(BUILD)
-
-# dump mondata, encounters, evos, moves, trainers
-	$(NARCHIVE) extract $(MSGDATA_TARGET) -o $(MSGDATA_DIR) -nf
-	$(MSGENC) -d -c $(CHARMAP) $(MSGDATA_DIR)/7_729 $(BUILD)/trainernames.txt
-	$(PYTHON) tools/source/dumptools/dump_narcs.py $(ROMNAME)
-
-	@echo "Done.  See output in dumped_armips/, learnsets are already in data/learnsets/learnsets.json."
-
+	@echo "hidden item params:"
+	cp $(HIDDEN_ITEM_PARAMS_BIN) $(HIDDEN_ITEM_PARAMS_TARGET)
 
 update_machine_moves: $(VENV_ACTIVATE)
 	$(PYTHON) scripts/update_machine_moves.py --descriptions --sprites
-	$(PYTHON) tools/source/dumptools/wrap_item_text.py data/text/830.txt data/text/830.txt
-	$(PYTHON) tools/source/dumptools/wrap_item_text.py data/text/834.txt data/text/834.txt
-	$(PYTHON) tools/source/dumptools/wrap_item_text.py data/text/838.txt data/text/838.txt
-	$(PYTHON) tools/source/dumptools/wrap_item_text.py data/text/846.txt data/text/846.txt
-	$(PYTHON) tools/source/dumptools/wrap_item_text.py data/text/850.txt data/text/850.txt
 	@echo "Updated item descriptions and sprites. Double check formatting"
 
 

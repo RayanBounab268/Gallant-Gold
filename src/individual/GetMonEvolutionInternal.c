@@ -73,7 +73,7 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
     species = PokeOtherFormMonsNoGet(species, form); // factor in form into species to cover shit like galarian corsola + cap pikachu that can't evolve
 
     evoTable = sys_AllocMemory(3, MAX_EVOS_PER_POKE * sizeof(struct Evolution));
-    ArchiveDataLoad(evoTable, ARC_EVOLUTIONS, species);
+    ReadWholeNarcMemberByIdPair(evoTable, ARC_EVOLUTIONS, species);
 
     switch (context) {
     case EVOCTX_LEVELUP:
@@ -197,36 +197,36 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
                     *method_ret = EVO_LEVEL_FEMALE;
                 }
                 break;
-            case EVO_CORONET: // magnetic field at route 43+kanto power plant
+            case EVO_MAGNETIC_FIELD: // magnetic field at route 43+kanto power plant
                 {
                     u32 location = gFieldSysPtr->location->mapId;
 
                     if (location == 45 || location == 18)
                     {
                         target = evoTable[i].target & 0x7FF;
-                        *method_ret = EVO_CORONET;
+                        *method_ret = EVO_MAGNETIC_FIELD;
                     }
                 }
                 break;
-            case EVO_ETERNA: // mossy rock at ilex+viridian forests
+            case EVO_MOSSY_ROCK: // mossy rock at ilex+viridian forests
                 {
                     u32 location = gFieldSysPtr->location->mapId;
 
                     if (location == 117 || location == 147)
                     {
                         target = evoTable[i].target & 0x7FF;
-                        *method_ret = EVO_ETERNA;
+                        *method_ret = EVO_MOSSY_ROCK;
                     }
                 }
                 break;
-            case EVO_ROUTE217: // icy rock at ice path+seafoam islands
+            case EVO_ICY_ROCK: // icy rock at ice path+seafoam islands
                 {
                     u32 location = gFieldSysPtr->location->mapId;
 
                     if (location == 239 || location == 456)
                     {
                         target = evoTable[i].target & 0x7FF;
-                        *method_ret = EVO_ROUTE217;
+                        *method_ret = EVO_ICY_ROCK;
                     }
                 }
                 break;
@@ -275,7 +275,7 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
 
                     for (k = 0; k < 4; k++)
                     {
-                        if (GetMoveData(GetMonData(pokemon, MON_DATA_MOVE1+k, NULL), MOVE_DATA_TYPE) == evoTable[i].param)
+                        if (GetMoveData(GetMonData(pokemon, MON_DATA_MOVE1+k, NULL), MOVE_DATA_TYPE) == evoTable[i].param && friendship >= FRIENDSHIP_EVOLUTION_THRESHOLD)
                         {
                             target = evoTable[i].target & 0x7FF;
                             *method_ret = EVO_HAS_MOVE_TYPE;
