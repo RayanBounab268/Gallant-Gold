@@ -366,6 +366,10 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         { .tag = 1047, .gfx = MON_OVERWORLD_GFX_START + SPECIES_MEGANIUM, .callback_params = OVERWORLD_SIZE_SMALL },
         { .tag = 1048, .gfx = MON_OVERWORLD_GFX_START + SPECIES_TYPHLOSION, .callback_params = OVERWORLD_SIZE_SMALL },
         { .tag = 1049, .gfx = MON_OVERWORLD_GFX_START + SPECIES_FERALIGATR, .callback_params = OVERWORLD_SIZE_SMALL },
+        // NEW_NPC_ENTRY(0), // TM Pokeball
+        { .tag = NEW_NPC_TAG_START, .gfx = NEW_NPC_GFX_START, .callback_params = 0x0420},
+        // NEW_NPC_ENTRY(1), // Gorigan
+        { .tag = NEW_NPC_TAG_START + 1, .gfx = NEW_NPC_GFX_START + 1, .callback_params = 0x0000},
 
         // pokémon follower specific overworlds start here... left off on gfx 1451 - galarian stunfisk which was inserted after all the others
 
@@ -3007,10 +3011,6 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
     { .tag = 1795, .gfx =  297, .callback_params = OVERWORLD_SIZE_SMALL}, // SPECIES_IRON_CROWN
     { .tag = 1796, .gfx =  297, .callback_params = OVERWORLD_SIZE_SMALL}, // SPECIES_TERAPAGOS
     { .tag = 1797, .gfx = 1547, .callback_params = OVERWORLD_SIZE_SMALL}, // SPECIES_PECHARUNT
-    // NEW_NPC_ENTRY(0), // TM Pokeball
-    { .tag = NEW_NPC_TAG_START, .gfx = NEW_NPC_GFX_START, .callback_params = 0x0420},
-    // NEW_NPC_ENTRY(1), // Gorigan
-    { .tag = NEW_NPC_TAG_START + 1, .gfx = NEW_NPC_GFX_START + 1, .callback_params = 0x0000},
     { 0xFFFF, 0, 0},
 };
 

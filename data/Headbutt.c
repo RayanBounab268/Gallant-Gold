@@ -5174,7 +5174,7 @@ const HeadbuttArchiveData __data =
 
     .route34 = {
         .normalTreeCount = 15,
-        .specialTreeCount = 0,
+        .specialTreeCount = 1,
         .normalSlots =
         {
             { SPECIES_HOOTHOOT, 9, 10 },
