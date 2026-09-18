@@ -730,11 +730,11 @@ trainerdata 20, "Falkner"
         ivs 252
         abilityslot 1
         level 15
-        pokemon SPECIES_PIDGEOTTO
+        pokemon SPECIES_TRUMBEAK
         item ITEM_BERRY_JUICE
-        move MOVE_FEINT_ATTACK
+        move MOVE_FURY_ATTACK
         move MOVE_AERIAL_ACE
-        move MOVE_QUICK_ATTACK
+        move MOVE_BULLET_SEED
         move MOVE_ROOST
         ball ITEM_ULTRA_BALL
         ballseal 0
@@ -26716,7 +26716,7 @@ trainerdata 741, "Grunt"
         ballseal 0
     endparty
 
-// REAL LYRA
+// REAL LYRA 1
 trainerdata 742, "Lyra"
     trainermontype TRAINER_DATA_TYPE_MOVES
     trainerclass TRAINERCLASS_NPC_TRAINER_LYRA
@@ -26731,29 +26731,29 @@ trainerdata 742, "Lyra"
 
     party 742
         // mon 0
-        ivs 252
+        ivs 120
         abilityslot 0
         level 12
         pokemon SPECIES_VULPIX
         move MOVE_MYSTICAL_FIRE
-        move MOVE_EXTRASENSORY
-        move MOVE_DARK_PULSE
-        move MOVE_HEX
+        move MOVE_SNARL
+        move MOVE_SWIFT
+        move MOVE_OMINOUS_WIND
         ballseal 0
 
         // mon 1
-        ivs 252
+        ivs 120
         abilityslot 1
         level 12
         pokemon SPECIES_MARILL
-        move MOVE_WATERFALL
-        move MOVE_ICE_PUNCH
+        move MOVE_AQUA_JET
+        move MOVE_POWER_UP_PUNCH
         move MOVE_TRAILBLAZE
         move MOVE_BELLY_DRUM
         ballseal 0
 
         // mon 2
-        ivs 252
+        ivs 120
         abilityslot 0
         level 12
         pokemon SPECIES_PETILIL
@@ -26764,13 +26764,13 @@ trainerdata 742, "Lyra"
         ballseal 0
 
         // mon 3
-        ivs 252
+        ivs 120
         abilityslot 0
         level 13
         pokemon SPECIES_ESPURR
-        move MOVE_PSYSHOCK
+        move MOVE_PSYBEAM
         move MOVE_FAKE_OUT
-        move MOVE_DARK_PULSE
+        move MOVE_YAWN
         move MOVE_SHOCK_WAVE
         ballseal 0
     endparty

@@ -215,7 +215,7 @@
 #define SEQ_ME_PT_NEW                        1208
 #define SEQ_ME_PT_RESULTG                    1209
 #define SEQ_ME_PT_SPECIAL                    1210
-#define SEQ_ME_PT_VICTORY                    1211
+#define SEQ_ME_POKESEN_N                     1211
 #define SEQ_ME_ROULETTE                      1212
 #define SEQ_ME_CASTLE                        1213
 #define SEQ_ME_BPGET                         1214
@@ -1383,6 +1383,19 @@
 #define SEQ_SE_GS_GEARSEALHAMERU             2376
 #define SEQ_SE_GS_XBUTTON_SYUKUSHOU          2377
 #define SEQ_SE_END                           2378
+#define SEQ_GS_WIN_PLASMA                    2379
+#define SEQ_GS_WIN_CHAMP                     2380
+#define SEQ_GS_EYE_BOY_ALT                   2381
+#define SEQ_GS_EYE_GIRL_ALT                  2382
+#define SEQ_GS_EYE_TWINS                     2383
+#define SEQ_GS_EYE_SPORT                     2384
+#define SEQ_GS_EYE_MYS                       2385
+#define SEQ_GS_EYE_HIKER                     2386
+#define SEQ_GS_EYE_RICH                      2387
+#define SEQ_GS_EYE_FIGHT                     2388
+#define SEQ_GS_EYE_LADY                      2389
+#define SEQ_GS_EYE_FUN                       2390
+#define SEQ_GS_EYE_TENNO                     2391
 
 //Sounds marked BANK, WAVE, PLAYER, GROUP not ported over from pokeheartgold/include/constants/sndseq.h
 
