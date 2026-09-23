@@ -1397,7 +1397,7 @@
 #define SEQ_GS_EYE_FUN                       2390
 #define SEQ_GS_EYE_TENNO                     2391
 
-//Sounds marked BANK, WAVE, PLAYER, GROUP not ported over from pokeheartgold/include/constants/sndseq.h
+// Sounds marked BANK, WAVE, PLAYER, GROUP not ported over from pokeheartgold/include/constants/sndseq.h
 
 enum {
     ANIM_MUSIC_COMBO_FALKNER,
@@ -1450,4 +1450,4 @@ enum {
     ANIM_MUSIC_COMBO_GORIGAN,
 };
 
-#endif //POKEHEARTGOLD_CONSTANTS_SNDSEQ_H
+#endif // POKEHEARTGOLD_CONSTANTS_SNDSEQ_H
