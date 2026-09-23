@@ -4111,7 +4111,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_SEEDOT] = {
         .entries = {
-            { EVO_LEVEL, 14, SPECIES_NUZLEAF },
+            { EVO_LEVEL, 13, SPECIES_NUZLEAF },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },

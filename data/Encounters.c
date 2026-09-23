@@ -620,7 +620,7 @@ const EncounterData __data[] =
             .speciesMorning = {
                 SPECIES_BELLSPROUT,
                 SPECIES_NATU,
-                SPECIES_MINCCINO,
+                SPECIES_LEDYBA,
                 SPECIES_SPINARAK,
                 SPECIES_CHINGLING,
                 SPECIES_MINCCINO,
@@ -634,7 +634,7 @@ const EncounterData __data[] =
             .speciesDay = {
                 SPECIES_BELLSPROUT,
                 SPECIES_MEDITITE,
-                SPECIES_MINCCINO,
+                SPECIES_LEDYBA,
                 SPECIES_SPINARAK,
                 SPECIES_CHINGLING,
                 SPECIES_MINCCINO,
@@ -646,7 +646,7 @@ const EncounterData __data[] =
                 SPECIES_MEDITITE,
             },
             .speciesNight = {
-                SPECIES_DUSKULL,
+                SPECIES_SPEAROW,
                 SPECIES_RATTATA,
                 SPECIES_SPINARAK,
                 SPECIES_ESPURR,
@@ -720,7 +720,7 @@ const EncounterData __data[] =
             .speciesMorning = {
                 SPECIES_BELLSPROUT,
                 SPECIES_NATU,
-                SPECIES_MINCCINO,
+                SPECIES_LEDYBA,
                 SPECIES_SPINARAK,
                 SPECIES_CHINGLING,
                 SPECIES_MINCCINO,
@@ -734,7 +734,7 @@ const EncounterData __data[] =
             .speciesDay = {
                 SPECIES_BELLSPROUT,
                 SPECIES_MEDITITE,
-                SPECIES_MINCCINO,
+                SPECIES_LEDYBA,
                 SPECIES_SPINARAK,
                 SPECIES_CHINGLING,
                 SPECIES_MINCCINO,
@@ -746,7 +746,7 @@ const EncounterData __data[] =
                 SPECIES_MEDITITE,
             },
             .speciesNight = {
-                SPECIES_DUSKULL,
+                SPECIES_SPEAROW,
                 SPECIES_RATTATA,
                 SPECIES_SPINARAK,
                 SPECIES_ESPURR,
@@ -853,9 +853,9 @@ const EncounterData __data[] =
                 SPECIES_ELECTRIKE,
                 SPECIES_ELECTRIKE,
                 SPECIES_SKORUPI,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_LEDYBA,
                 SPECIES_MURKROW,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_LEDYBA,
                 SPECIES_MURKROW,
                 SPECIES_ELECTRIKE,
             },
@@ -6418,46 +6418,46 @@ const EncounterData __data[] =
                 6, 4, 6, 4, 6, 6, 6, 6, 6, 4, 6, 4
             },
             .speciesMorning = {
-                SPECIES_BRONZOR,
-                SPECIES_NATU,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
-                SPECIES_ESPURR,
-                SPECIES_DUSKULL,
-                SPECIES_CHINGLING,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
-                SPECIES_CHINGLING,
-                SPECIES_DUSKULL,
-                SPECIES_ELGYEM,
-                SPECIES_ELGYEM,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_BRONZOR,                    // 20
+                SPECIES_NATU,                       // 20
+                SPECIES_BALTOY,                     // 10
+                SPECIES_ESPURR,                     // 10
+                SPECIES_ZUBAT,                      // 10
+                SPECIES_CHINGLING,                  // 10
+                SPECIES_BALTOY,                     // 5
+                SPECIES_CHINGLING,                  // 5
+                SPECIES_ZUBAT,                      // 4       
+                SPECIES_ELGYEM,                     // 4
+                SPECIES_ELGYEM,                     // 1
+                SPECIES_WYNAUT,                     // 1
             },
             .speciesDay = {
                 SPECIES_BRONZOR,
                 SPECIES_NATU,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_BALTOY,
                 SPECIES_ESPURR,
-                SPECIES_DUSKULL,
+                SPECIES_ZUBAT,
                 SPECIES_CHINGLING,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_BALTOY,
                 SPECIES_CHINGLING,
-                SPECIES_DUSKULL,
+                SPECIES_ZUBAT,
                 SPECIES_ELGYEM,
                 SPECIES_ELGYEM,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_WYNAUT,
             },
             .speciesNight = {
                 SPECIES_BRONZOR,
                 SPECIES_NATU,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_BALTOY,
                 SPECIES_ESPURR,
-                SPECIES_DUSKULL,
+                SPECIES_ZUBAT,
                 SPECIES_CHINGLING,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_BALTOY,
                 SPECIES_CHINGLING,
-                SPECIES_DUSKULL,
+                SPECIES_ZUBAT,
                 SPECIES_ELGYEM,
                 SPECIES_ELGYEM,
-                MON_WITH_FORM(SPECIES_YAMASK, 1),
+                SPECIES_WYNAUT,
             },
         },
         .hoennSoundSpecies = {
