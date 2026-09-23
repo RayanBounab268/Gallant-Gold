@@ -31685,11 +31685,11 @@
       },
       {
         "Level": 10,
-        "Move": "MOVE_TELEPORT"
+        "Move": "MOVE_CONFUSE_RAY"
       },
       {
         "Level": 15,
-        "Move": "MOVE_CONFUSE_RAY"
+        "Move": "MOVE_WING_ATTACK"
       },
       {
         "Level": 20,
@@ -31705,7 +31705,7 @@
       },
       {
         "Level": 30,
-        "Move": "MOVE_POWER_SWAP"
+        "Move": "MOVE_DRILL_PECK"
       },
       {
         "Level": 35,
