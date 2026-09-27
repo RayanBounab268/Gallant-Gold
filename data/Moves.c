@@ -10359,7 +10359,7 @@ const MoveSourceEntry sMoveSource[NUM_OF_MOVES + 1] = {
         },
         .battle = {
             .target = RANGE_SINGLE_TARGET_SPECIAL,
-            .priority = 0,
+            .priority = 1,
             .flags = 0x00,
         },
         .contest = {
