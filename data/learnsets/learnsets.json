@@ -54060,7 +54060,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_POWER_TRICK"
+        "Move": "MOVE_JUMP_KICK"
       },
       {
         "Level": 39,
@@ -54273,7 +54273,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_POWER_TRICK"
+        "Move": "MOVE_JUMP_KICK"
       },
       {
         "Level": 47,
@@ -62810,7 +62810,7 @@
       },
       {
         "Level": 37,
-        "Move": "MOVE_SAFEGUARD"
+        "Move": "MOVE_PSYCHIC"
       },
       {
         "Level": 42,
