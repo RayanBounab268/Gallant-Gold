@@ -56,7 +56,7 @@ BOOL btl_scr_cmd_27_shouldgetexp(void *bw, struct BattleStruct *sp);
 void Task_DistributeExp_Extend(void *arg0, void *work);
 BOOL Task_DistributeExp_capture_experience(void *arg0, void *work, u32 get_client_no);
 BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp);
-BOOL btl_scr_cmd_54_ohko_move_handle(void *bw, struct BattleStruct *sp);
+BOOL btl_scr_cmd_54_ohko_move_handle(void *bw UNUSED, struct BattleStruct *sp);
 BOOL btl_scr_cmd_5f_trysleeptalk(void *bw, struct BattleStruct *sp);
 BOOL btl_scr_cmd_6f_fury_cutter_damage_calc(void *bw, struct BattleStruct *sp);
 BOOL btl_scr_cmd_7c_beat_up_hit_count(void *bw, struct BattleStruct *sp);
@@ -490,7 +490,7 @@ u32 cmdAddress = 0;
 #pragma GCC diagnostic pop
 #endif // DEBUG_BATTLE_SCRIPT_COMMANDS
 
-#define BASE_ENGINE_BTL_SCR_CMDS_MAX 0x11D
+#define BASE_ENGINE_BTL_SCR_CMDS_MAX 0x12A
 
 // clang-format off
 const btl_scr_cmd_func NewBattleScriptCmdTable[] = {
@@ -1639,54 +1639,11 @@ BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp)
  *  @param sp global battle structure
  *  @return FALSE
  */
-BOOL btl_scr_cmd_54_ohko_move_handle(void *bw, struct BattleStruct *sp)
+BOOL btl_scr_cmd_54_ohko_move_handle(void *bw UNUSED, struct BattleStruct *sp)
 {
-    u16 hit;
     IncrementBattleScriptPtr(sp, 1);
-
-    sp->server_status_flag |= SERVER_STATUS_FLAG_OTHER_ACCURACY_CALC;
-
-    if (MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_STURDY) == TRUE) {
-        sp->waza_status_flag |= MOVE_STATUS_STURDY;
-    } else {
-        if (((sp->battlemon[sp->defence_client].effect_of_moves & MOVE_EFFECT_FLAG_LOCK_ON) == 0)
-            && (GetBattlerAbility(sp, sp->attack_client) != ABILITY_NO_GUARD)
-            && (GetBattlerAbility(sp, sp->defence_client) != ABILITY_NO_GUARD)) {
-            hit = sp->moveTbl[sp->current_move_index].accuracy + (sp->battlemon[sp->attack_client].level - sp->battlemon[sp->defence_client].level);
-            if (((BattleRand(bw) % 100) < hit)
-                && (sp->battlemon[sp->attack_client].level >= sp->battlemon[sp->defence_client].level)) {
-                hit = 1;
-            } else {
-                hit = 0;
-            }
-        } else {
-            if ((((sp->battlemon[sp->defence_client].moveeffect.battlerIdLockOn == sp->attack_client) && (sp->battlemon[sp->defence_client].effect_of_moves & MOVE_EFFECT_FLAG_LOCK_ON))
-                    || (GetBattlerAbility(sp, sp->attack_client) == ABILITY_NO_GUARD)
-                    || (GetBattlerAbility(sp, sp->defence_client) == ABILITY_NO_GUARD))
-                && (sp->battlemon[sp->attack_client].level >= sp->battlemon[sp->defence_client].level)) {
-                hit = 1;
-            } else {
-                hit = sp->moveTbl[sp->current_move_index].accuracy + (sp->battlemon[sp->attack_client].level - sp->battlemon[sp->defence_client].level);
-                if (((BattleRand(bw) % 100) < hit)
-                    && (sp->battlemon[sp->attack_client].level >= sp->battlemon[sp->defence_client].level)) {
-                    hit = 1;
-                } else {
-                    hit = 0;
-                }
-            }
-            sp->waza_status_flag |= MOVE_STATUS_BYPASSED_ACCURACY;
-        }
-        if (hit) {
-            sp->damage = sp->battlemon[sp->defence_client].hp * -1;
-            sp->waza_status_flag |= MOVE_STATUS_ONE_HIT_KO;
-        } else {
-            if (sp->battlemon[sp->attack_client].level >= sp->battlemon[sp->defence_client].level) {
-                sp->waza_status_flag |= FLAG_CONTACT;
-            } else {
-                sp->waza_status_flag |= MOVE_STATUS_ONE_HIT_KO_FAILED;
-            }
-        }
-    }
+    sp->damage = sp->battlemon[sp->defence_client].hp * -1;
+    sp->waza_status_flag |= MOVE_STATUS_ONE_HIT_KO;
 
     return FALSE;
 }
@@ -2867,16 +2824,22 @@ BOOL btl_scr_cmd_FD_trymegaorultraburstduringpursuit(void *bw, struct BattleStru
     int failAddress = read_battle_script_param(sp);
     sp->temp_work = 0;
 
-    if (newBS.needMega[sp->attack_client] == MEGA_NEED && sp->battlemon[sp->attack_client].hp) {
-        if (BattleTypeGet(bw) & BATTLE_TYPE_MULTI) {
-            if (sp->attack_client == 0 || (sp->attack_client == 2 && sp->battlemon[sp->attack_client].id_no == sp->battlemon[0].id_no)) {
-                newBS.PlayerMegaed = TRUE;
-            }
-        } else if (sp->attack_client == 0 || sp->attack_client == 2) {
+    if (newBS.needMega[sp->attack_client] == MEGA_NEED && newBS.SideMega[sp->attack_client] != TRUE && sp->battlemon[sp->attack_client].hp) {
+        newBS.SideMega[sp->attack_client] = TRUE;
+        if (sp->attack_client == 0) {
             newBS.PlayerMegaed = TRUE;
         }
 
-        sp->battlemon[sp->attack_client].form_no = GrabMegaTargetForm(sp->battlemon[sp->attack_client].species, sp->battlemon[sp->attack_client].item);
+        if (!DoesSideHave2Battlers(bw, sp->attack_client)) {
+            if (sp->attack_client == 0 || sp->attack_client == 2) {
+                newBS.PlayerMegaed = TRUE;
+            }
+            int ally = BATTLER_ALLY(sp->attack_client);
+            newBS.SideMega[ally] = TRUE;
+        }
+
+        int form = sp->battlemon[sp->attack_client].form_no;
+        sp->battlemon[sp->attack_client].form_no = GrabMegaTargetForm(sp->battlemon[sp->attack_client].species, sp->battlemon[sp->attack_client].item, form);
         BattleFormChange(sp->attack_client, sp->battlemon[sp->attack_client].form_no, bw, sp, TRUE);
 
         newBS.needMega[sp->attack_client] = MEGA_NO_NEED;
@@ -3194,6 +3157,7 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
             if (ctx->battlemon[ctx->attack_client].states[STAT_ATTACK] > 0) {
                 // King's Shield lowers Attack by two stages in Generation 6 and 7.
                 ctx->addeffect_param = (GEN_LATEST > 7) ? MOVE_SUBSCRIPT_PTR_ATTACK_DOWN_1_STAGE : MOVE_SUBSCRIPT_PTR_ATTACK_DOWN_2_STAGES;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_CONTACT_PROTECTED;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }
@@ -3201,13 +3165,14 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
         case MOVE_SPIKY_SHIELD:
             if (GetBattlerAbility(ctx, ctx->attack_client) != ABILITY_MAGIC_GUARD) {
                 ctx->hp_calc_work = BattleDamageDivide(ctx->battlemon[ctx->attack_client].maxhp * -1, 8);
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_CONTACT_PROTECTED;
                 ctx->battlerIdTemp = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_SPIKY_SHIELD);
             }
             break;
         case MOVE_BANEFUL_BUNKER:
             if (ctx->battlemon[ctx->attack_client].condition == 0) {
-                ctx->addeffect_type = ADD_STATUS_MOVE_EFFECT;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_MOVE_EFFECT;
                 ctx->state_client = ctx->attack_client;
                 // Swap atk client to defender so it checks the protect users ability for Corrosion
                 ctx->attack_client = ctx->defence_client;
@@ -3217,6 +3182,7 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
         case MOVE_OBSTRUCT:
             if (ctx->battlemon[ctx->attack_client].states[STAT_DEFENSE] > 0) {
                 ctx->addeffect_param = MOVE_SUBSCRIPT_PTR_DEFENSE_DOWN_2_STAGES;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_CONTACT_PROTECTED;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }
@@ -3224,13 +3190,14 @@ BOOL btl_scr_cmd_103_checkprotectcontactmoves(void *bsys UNUSED, struct BattleSt
         case MOVE_SILK_TRAP:
             if (ctx->battlemon[ctx->attack_client].states[STAT_SPEED] > 0) {
                 ctx->addeffect_param = MOVE_SUBSCRIPT_PTR_SPEED_DOWN_1_STAGE;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_CONTACT_PROTECTED;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_UPDATE_STAT_STAGE);
             }
             break;
         case MOVE_BURNING_BULWARK:
             if (ctx->battlemon[ctx->attack_client].condition == 0) {
-                ctx->addeffect_type = ADD_STATUS_MOVE_EFFECT;
+                ctx->addeffect_type = SIDE_EFFECT_TYPE_MOVE_EFFECT;
                 ctx->state_client = ctx->attack_client;
                 SkillSequenceGosub(ctx, ARC_BATTLE_SUB_SEQ, BATTLE_SUBSCRIPT_BURN);
             }
@@ -3431,7 +3398,7 @@ BOOL BtlCmd_EndOfTurnWeatherEffect(struct BattleSystem *bsys, struct BattleStruc
             ctx->hp_calc_work = BattleDamageDivide(ctx->battlemon[battlerId].maxhp, 8);
         }
     }
-
+    ctx->battlerIdTemp = battlerId;
     return FALSE;
 }
 
@@ -3955,12 +3922,12 @@ BOOL BtlCmd_GenerateEndOfBattleItem(struct BattleSystem *bw, struct BattleStruct
  *  @param defender_species the defender species
  *  @return TRUE if the interacting species and items can trick, FALSE otherwise
  */
-BOOL LONG_CALL CanTrickHeldItemManual(u16 attacker_item, u16 attacker_species, u16 defender_item, u16 defender_species)
+BOOL LONG_CALL CanTrickHeldItemManual(u16 attacker_item, u16 attacker_species, u16 defender_item, u16 defender_species, u32 attacker_form, u32 defender_form)
 {
-    return CanItemBeRemovedFromSpecies(attacker_species, attacker_item)
-        && CanItemBeRemovedFromSpecies(attacker_species, defender_item)
-        && CanItemBeRemovedFromSpecies(defender_species, attacker_item)
-        && CanItemBeRemovedFromSpecies(defender_species, defender_item);
+    return CanItemBeRemovedFromSpecies(attacker_species, attacker_item, attacker_form)
+        && CanItemBeRemovedFromSpecies(attacker_species, defender_item, attacker_form)
+        && CanItemBeRemovedFromSpecies(defender_species, attacker_item, defender_form)
+        && CanItemBeRemovedFromSpecies(defender_species, defender_item, defender_form);
 }
 
 BOOL LONG_CALL CanTrickHeldItem(struct BattleStruct *ctx, u32 attacker, u32 defender)
@@ -3972,23 +3939,7 @@ BOOL LONG_CALL CanTrickHeldItem(struct BattleStruct *ctx, u32 attacker, u32 defe
     u32 defenderItem = ctx->battlemon[defender].item; // bypass klutz and friends probably
     u32 defenderForm = ctx->battlemon[defender].form_no;
 
-    BOOL attackerSlowbroHandling = (attackerSpecies == SPECIES_SLOWBRO && (attackerItem == ITEM_SLOWBRONITE || defenderItem == ITEM_SLOWBRONITE) && attackerForm == 2);
-    BOOL defenderSlowbroHandling = (defenderSpecies == SPECIES_SLOWBRO && (attackerItem == ITEM_SLOWBRONITE || defenderItem == ITEM_SLOWBRONITE) && defenderForm == 2);
-
-    // CheckMegaData will gladly tell you a galarian slowbro can't trick its slowbronite away...  we have to take over
-    if (attackerSlowbroHandling && defenderSlowbroHandling) {
-        return TRUE;
-    } else if (attackerSlowbroHandling || defenderSlowbroHandling) {
-        u32 offendingItem = attackerItem == ITEM_SLOWBRONITE ? 1 : defenderItem == ITEM_SLOWBRONITE ? 2
-                                                                                                    : 0;
-        if (offendingItem == 1) {
-            attackerItem = ITEM_POKE_BALL;
-        } else if (offendingItem == 2) {
-            defenderItem = ITEM_POKE_BALL;
-        }
-    }
-
-    return CanTrickHeldItemManual(attackerItem, attackerSpecies, defenderItem, defenderSpecies);
+    return CanTrickHeldItemManual(attackerItem, attackerSpecies, defenderItem, defenderSpecies, attackerForm, defenderForm);
 }
 
 BOOL BtlCmd_TrySwapItems(void *bw, struct BattleStruct *sp)
@@ -5200,7 +5151,7 @@ BOOL btl_scr_cmd_11A_TrySynchronizeStatus(void *bsys UNUSED, struct BattleStruct
     int seq_no = 0;
 
     if (TryGetSynchronizeStatusSubsequence(ctx, &seq_no) == TRUE) {
-        ctx->addeffect_type = ADD_STATUS_ABILITY;
+        ctx->addeffect_type = SIDE_EFFECT_TYPE_ABILITY;
         ctx->temp_work = seq_no;
     } else {
         IncrementBattleScriptPtr(ctx, failAddress);
@@ -5742,6 +5693,22 @@ BOOL BtlCmd_Metronome(struct BattleSystem *bsys, struct BattleStruct *ctx)
         ctx->current_move_index = moveNo;
 
         break;
+    }
+
+    return FALSE;
+}
+
+BOOL BtlCmd_TryCopycat(struct BattleSystem *bsys, struct BattleStruct *ctx)
+{
+    IncrementBattleScriptPtr(ctx, 1);
+    int adrs = read_battle_script_param(ctx);
+
+    if (ctx->lastSuccessfulMove && CheckLegalMetronomeMove(bsys, ctx, ctx->attack_client, ctx->lastSuccessfulMove)) {
+        ctx->waza_work = ctx->lastSuccessfulMove;
+        ctx->moveNoTemp = ctx->lastSuccessfulMove;
+        ctx->current_move_index = ctx->lastSuccessfulMove;
+    } else {
+        IncrementBattleScriptPtr(ctx, adrs);
     }
 
     return FALSE;

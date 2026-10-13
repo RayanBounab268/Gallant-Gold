@@ -141,6 +141,15 @@ struct TrainerMoney PrizeMoney[] = // 0x34C04 in Overlay 12; 2 bytes for trainer
         { .class = TRAINERCLASS_BIRD_KEEPER, .multiplier = 8 },
         { .class = TRAINERCLASS_NPC_TRAINER_ETHAN, .multiplier = 30 },
         { .class = TRAINERCLASS_NPC_TRAINER_LYRA, .multiplier = 30 },
-        { .class = TRAINERCLASS_CIPHER_ADMIN_GORIGAN, .multiplier = 20},
+        { .class = TRAINERCLASS_CIPHER_ADMIN_GORIGAN, .multiplier = 30},
+        { .class = TRAINERCLASS_LEADER_ROARK, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_GARDENIA, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_MAYLENE, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_CRASHER_WAKE, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_FANTINA, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_BYRON, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_CANDICE, .multiplier = 30 },
+        { .class = TRAINERCLASS_LEADER_VOLKNER, .multiplier = 30 },
+        { .class = TRAINERCLASS_CHAMPION_CYNTHIA, .multiplier = 50 },
     };
 #endif // EXPAND_TRAINER_PRIZE_MONEY
